@@ -23,3 +23,26 @@ C:\Users\hadi 11\source\repos\Belchfaa\Belchfaa\obj\Debug\Belchfaa.AdminHomeForm
 C:\Users\hadi 11\source\repos\Belchfaa\Belchfaa\obj\Debug\Belchfaa.AdminDisplayAllMedicinesForm.resources
 C:\Users\hadi 11\source\repos\Belchfaa\Belchfaa\obj\Debug\Belchfaa.DisplayAllUsersForm.resources
 C:\Users\hadi 11\source\repos\Belchfaa\Belchfaa\obj\Debug\Belchfaa.HistoryForm.resources
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\bin\Debug\Belchfaa.exe.config
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\bin\Debug\Belchfaa.exe
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\bin\Debug\Belchfaa.pdb
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.csproj.AssemblyReference.cache
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.AdminDisplayAllMedicinesForm.resources
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.AdminHomeForm.resources
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.DisplayAllUsersForm.resources
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.DisplayCartForm.resources
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.FirstForm.resources
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.HistoryForm.resources
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.PaymentForm.resources
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.SignUpForm.resources
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.SignInForm.resources
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.UserHomeForm.resources
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.SearchForm.resources
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.DisplayAllMedicnesForm.resources
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.MedDetailsForm.resources
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.Properties.Resources.resources
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.csproj.GenerateResource.cache
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.csproj.CoreCompileInputs.cache
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.csproj.CopyComplete
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.exe
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.pdb

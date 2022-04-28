@@ -29,3 +29,8 @@ total number not null,
 timeP varchar(50) not null
 );
 
+
+
+insert into medicines values{1,'mid1','m',110,20,'o'};
+insert into medicines values{2,'mid2','s',120,10,'p'};
+insert into medicines values{3,'mid3','d',100,10,'q'};
