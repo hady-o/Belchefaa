@@ -7,6 +7,14 @@ medAmount number not null,
 medCategory varchar(50) not null
 );
 
+
+create table users(
+userId number primary key,
+userName varchar(50) not null,
+userAge number not NULL,
+userPassword varchar(50) not null);
+
+
 create table cart(
 cartUserId number references users (userId),
 cartMedId number references Medicines (medId),
@@ -21,8 +29,3 @@ total number not null,
 timeP varchar(50) not null
 );
 
-create table users(
-userId number primary key
-userName varchar(50) not null
-userAge number not NULL
-userPassword varchar(50) not null);
