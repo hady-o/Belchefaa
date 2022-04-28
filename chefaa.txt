@@ -1,0 +1,28 @@
+create table Medicines(
+medId number primary key,
+medName varchar(50) not null,
+desciption varchar(50) not null,
+medPrice number not null,
+medAmount number not null,
+medCategory varchar(50) not null
+);
+
+create table cart(
+cartUserId number references users (userId),
+cartMedId number references Medicines (medId),
+amount number not null,
+constraint PK_D primary key (cartUserId, cartMedId)
+);
+
+
+create table userHistory(
+userId number references users (userId),
+total number not null,
+timeP varchar(50) not null
+);
+
+create table users(
+userId number primary key
+userName varchar(50) not null
+userAge number not NULL
+userPassword varchar(50) not null);

@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3786822A-D8AD-470E-A399-9734C848F236}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Belchfaa</RootNamespace>
+    <AssemblyName>Belchfaa</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.DataAccess">
+      <HintPath>E:\app\hadi11\product\11.2.0\dbhome_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminClass.cs" />
+    <Compile Include="AdminDisplayAllMedicinesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDisplayAllMedicinesForm.Designer.cs">
+      <DependentUpon>AdminDisplayAllMedicinesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminHomeForm.Designer.cs">
+      <DependentUpon>AdminHomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CartClass.cs" />
+    <Compile Include="CurrentData.cs" />
+    <Compile Include="CurrentMed.cs" />
+    <Compile Include="CurrentUserClass.cs" />
+    <Compile Include="DisplayAllUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayAllUsersForm.Designer.cs">
+      <DependentUpon>DisplayAllUsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayCartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayCartForm.Designer.cs">
+      <DependentUpon>DisplayCartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryClassClass.cs" />
+    <Compile Include="HistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryForm.Designer.cs">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentClass.cs" />
+    <Compile Include="PaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm.Designer.cs">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserHomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserHomeForm.Designer.cs">
+      <DependentUpon>UserHomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayAllMedicnesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayAllMedicnesForm.Designer.cs">
+      <DependentUpon>DisplayAllMedicnesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAndRegister.cs" />
+    <Compile Include="FirstForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstForm.Designer.cs">
+      <DependentUpon>FirstForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignInForm.Designer.cs">
+      <DependentUpon>SignInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedDetailsForm.Designer.cs">
+      <DependentUpon>MedDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicineQuaryClass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminDisplayAllMedicinesForm.resx">
+      <DependentUpon>AdminDisplayAllMedicinesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminHomeForm.resx">
+      <DependentUpon>AdminHomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayAllUsersForm.resx">
+      <DependentUpon>DisplayAllUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayCartForm.resx">
+      <DependentUpon>DisplayCartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstForm.resx">
+      <DependentUpon>FirstForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryForm.resx">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm.resx">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignInForm.resx">
+      <DependentUpon>SignInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserHomeForm.resx">
+      <DependentUpon>UserHomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayAllMedicnesForm.resx">
+      <DependentUpon>DisplayAllMedicnesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedDetailsForm.resx">
+      <DependentUpon>MedDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
