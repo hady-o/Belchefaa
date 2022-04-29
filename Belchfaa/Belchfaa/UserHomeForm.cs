@@ -47,5 +47,28 @@ namespace Belchfaa
             this.Close();
             new HistoryForm().Show();
         }
+
+        private void UserHomeForm_Load(object sender, EventArgs e)
+        {
+            if (CurrentUserClass.gender.ToString() == "Male")
+            {
+                picbox.Image = Properties.Resources.male;
+            }
+            else if (CurrentUserClass.gender.ToString() == "Female")
+            {
+                picbox.Image = Properties.Resources.female;
+            }
+            else
+            {
+                picbox.Image = Properties.Resources.not_say;
+            }
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new UserInfo().Show();
+        }
     }
 }

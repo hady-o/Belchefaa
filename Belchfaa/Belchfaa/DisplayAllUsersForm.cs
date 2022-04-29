@@ -35,5 +35,10 @@ namespace Belchfaa
             this.Close();
             new AdminHomeForm().Show();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
