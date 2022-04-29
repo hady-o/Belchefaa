@@ -12,6 +12,7 @@ namespace Belchfaa
     
     internal class LoginAndRegister
     {
+        //class LoginAndRegister
         string ordb = "Data Source=orcl;User Id=scott;Password=tiger;";
         public static OracleConnection conn;
         OracleCommand cmd;
@@ -77,7 +78,7 @@ namespace Belchfaa
                 cmd.Parameters.Add("pass", password.Text);
 
                 OracleDataReader dr = cmd.ExecuteReader();
-
+            
                 if (dr.Read())
                 {
                     if (!(dr[0].ToString().Equals("")))
