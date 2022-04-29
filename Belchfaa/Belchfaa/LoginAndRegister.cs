@@ -17,7 +17,7 @@ namespace Belchfaa
         OracleCommand cmd;
         OracleCommand loginCmd;
 
-        public void signUp(TextBox textBox1, TextBox textBox2, TextBox textBox3, TextBox textBox4)
+        public void signUp(TextBox textBox1, TextBox textBox2, TextBox textBox3, TextBox textBox4,ComboBox comboBox1)
         {
             conn = new OracleConnection(ordb);
             conn.Open();
@@ -29,7 +29,7 @@ namespace Belchfaa
             cmd2.CommandText = "select max (userId) from users";
             OracleDataReader dr = cmd2.ExecuteReader();
             cmd.CommandText = @"insert into users
-                                values(:id,:name,:age,:pass)";
+                                values(:id,:gender,:name,:age,:pass)";
             if (dr.Read())
             {
                 if (!(dr[0].ToString().Equals("")))
@@ -44,6 +44,7 @@ namespace Belchfaa
                 }
                 dr.Close();
             }
+            cmd.Parameters.Add("gender", comboBox1.Text);
             cmd.Parameters.Add("Name", textBox1.Text);
             cmd.Parameters.Add("age", (textBox2.Text));
             cmd.Parameters.Add("pass", textBox3.Text);
@@ -54,6 +55,7 @@ namespace Belchfaa
                 textBox2.Text = "";
                 textBox3.Text = "";
                 textBox4.Text = "";
+                comboBox1.Text = "";
                 MessageBox.Show("you have been registerd successfuly");
                 MessageBox.Show("your Id is: "+userId);
             }
@@ -72,7 +74,7 @@ namespace Belchfaa
 
                 cmd.CommandText = "select * from users where userId=:id and userPassword=:pass";
                 cmd.Parameters.Add("id", id.Text);
-                cmd.Parameters.Add("name", password.Text);
+                cmd.Parameters.Add("pass", password.Text);
 
                 OracleDataReader dr = cmd.ExecuteReader();
 
@@ -81,10 +83,12 @@ namespace Belchfaa
                     if (!(dr[0].ToString().Equals("")))
                     {
                         CurrentUserClass.userId = int.Parse(dr[0].ToString());
-                        CurrentUserClass.userAge = int.Parse(dr[2].ToString());
-                        CurrentUserClass.userName = dr[1].ToString();
-                        CurrentUserClass.userPassword = dr[3].ToString();
-                        return true;
+                        CurrentUserClass.userAge = int.Parse(dr[3].ToString());
+                        CurrentUserClass.userName = dr[2].ToString();
+                        CurrentUserClass.gender = dr[1].ToString();
+                        CurrentUserClass.userPassword = dr[4].ToString();
+
+                    return true;
                         //MessageBox.Show("Login successfuly");
                         // MessageBox.Show("your name is: " + dr[1]);
                     }

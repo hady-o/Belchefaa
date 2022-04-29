@@ -10,6 +10,7 @@ namespace Belchfaa
     {
         public static int userId;
         public static string userName;
+        public static string gender;
         public static int userAge;
         public static string userPassword;
     }

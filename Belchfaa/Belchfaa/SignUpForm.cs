@@ -24,7 +24,10 @@ namespace Belchfaa
 
         private void Form2_Load(object sender, EventArgs e)
         {
-           
+
+            comboBox1.Items.Add("Male");
+            comboBox1.Items.Add("Female");
+            comboBox1.Items.Add("Not Say");
             register = new LoginAndRegister();
             textBox3.UseSystemPasswordChar = true;
             textBox4.UseSystemPasswordChar = true;
@@ -44,7 +47,7 @@ namespace Belchfaa
         {
             try
             {
-                if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "")
+                if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == ""||comboBox1.Text == "")
                 {
                     MessageBox.Show("please fill all data");
                 }
@@ -54,7 +57,7 @@ namespace Belchfaa
                 }
                 else
                 {
-                    register.signUp(textBox1, textBox2, textBox3, textBox4);
+                    register.signUp(textBox1, textBox2, textBox3, textBox4,comboBox1);
                 }
             }
             catch (Exception ex)
