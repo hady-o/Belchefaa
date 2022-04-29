@@ -67,5 +67,39 @@ namespace Belchfaa
         {
             this.Close();
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FirstForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            //this.Visible= false;
+
+            new SignInForm().Show();
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+            //this.Visible = false;
+            new SignUpForm().Show();   
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            //this.Close();
+            new AboutUs().Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
