@@ -10,6 +10,7 @@ medCategory varchar(50) not null
 
 create table users(
 userId number primary key,
+gender varchar(50) not null,
 userName varchar(50) not null,
 userAge number not NULL,
 userPassword varchar(50) not null);
