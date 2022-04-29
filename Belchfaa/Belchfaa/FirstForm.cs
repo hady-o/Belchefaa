@@ -59,7 +59,8 @@ namespace Belchfaa
 
         private void button3_Click(object sender, EventArgs e)
         {
-           
+            //this.Close();
+            new AboutUs().Show();
         }
 
         private void button4_Click(object sender, EventArgs e)

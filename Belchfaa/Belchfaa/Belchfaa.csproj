@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminClass.cs" />
     <Compile Include="AdminDisplayAllMedicinesForm.cs">
       <SubType>Form</SubType>
@@ -138,6 +144,9 @@
     <Compile Include="MedicineQuaryClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminDisplayAllMedicinesForm.resx">
       <DependentUpon>AdminDisplayAllMedicinesForm.cs</DependentUpon>
     </EmbeddedResource>
