@@ -30,10 +30,10 @@ namespace Belchfaa
             medicine = new MedicineQuaryClass();
             cart = new CartClass();
             cart.displayCart(CurrentUserClass.userId, listView1,textBox1);
-            textBox1.Text = PaymentClass.subTotal.ToString() + " $";
+            textBox1.Text = PaymentClass.subTotal.ToString() + " L.E.";
             if(PaymentClass.subTotal==0)
             {
-                MessageBox.Show("Your cart is Empty");
+                MessageBox.Show("Your cart is empty");
                 this.Close();
                 new UserHomeForm().Show();
             }

@@ -47,9 +47,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(69, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 16);
+            this.label1.Size = new System.Drawing.Size(56, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Sup Total";
+            this.label1.Text = "Subtotal";
             // 
             // label2
             // 

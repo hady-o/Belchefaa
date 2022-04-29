@@ -34,7 +34,7 @@ namespace Belchfaa
             {
                 ListViewItem list = new ListViewItem(dr[1].ToString());
 
-                list.SubItems.Add(dr[3].ToString() + " $");
+                list.SubItems.Add(dr[3].ToString() + " L.E.");
                 list.SubItems.Add(dr[4].ToString() + " items");
                 list.SubItems.Add(dr[5].ToString());
 

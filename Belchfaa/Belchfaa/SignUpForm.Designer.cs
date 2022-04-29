@@ -55,14 +55,6 @@
             label1.Text = "Enter your name";
             label1.UseCompatibleTextRendering = true;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(338, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 22);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -96,6 +88,14 @@
             label4.Text = "Confirm password";
             label4.UseCompatibleTextRendering = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(338, 78);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(137, 22);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(338, 148);
@@ -117,6 +117,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(137, 22);
             this.textBox4.TabIndex = 7;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // button1
             // 
@@ -142,7 +143,7 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Form2
+            // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -158,7 +159,7 @@
             this.Controls.Add(label2);
             this.Controls.Add(label1);
             this.Controls.Add(this.textBox1);
-            this.Name = "Form2";
+            this.Name = "SignUpForm";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);

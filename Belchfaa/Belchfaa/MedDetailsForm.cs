@@ -34,7 +34,7 @@ namespace Belchfaa
         private void MedDetails_Load(object sender, EventArgs e)
         {
             textBox1.Text = CurrentMed.medName;
-            textBox2.Text = CurrentMed.medPrice.ToString()+" $";
+            textBox2.Text = CurrentMed.medPrice.ToString()+" L.E.";
             textBox3.Text = CurrentMed.medAmount.ToString()+" items";
             textBox4.Text = CurrentMed.medCategory;
             MedicineQuaryClass = new MedicineQuaryClass();

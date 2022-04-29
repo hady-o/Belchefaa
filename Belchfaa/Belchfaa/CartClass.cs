@@ -84,7 +84,7 @@ namespace Belchfaa
             {
                 ListViewItem list = new ListViewItem(dr[2].ToString());
 
-                list.SubItems.Add(dr[4].ToString() +" $");
+                list.SubItems.Add(dr[4].ToString() +" L.E.");
                 list.SubItems.Add(dr[0].ToString() +" items");
                 list.SubItems.Add(dr[6].ToString());
                 totalPrice += int.Parse(dr[4].ToString())*int.Parse(dr[0].ToString());

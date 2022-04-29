@@ -1,4 +1,5 @@
 ﻿using Oracle.DataAccess.Client;
+using Oracle.DataAccess.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace Belchfaa
     {
         string ordb = "Data Source=orcl;User Id=scott;Password=tiger;";
         public static OracleConnection conn;
-      
+        
         public bool serchForMedicine(string name )
         {
             bool found=false;
@@ -21,7 +22,8 @@ namespace Belchfaa
             OracleCommand cmd4 = new OracleCommand();
             cmd4.Connection = conn;
 
-            cmd4.CommandText = "select * from medicines where medName=:name";
+            cmd4.CommandText = @"select * from medicines  
+                where upper(medName) like upper(:name)";
             cmd4.Parameters.Add("name", name); 
 
 

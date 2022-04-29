@@ -41,7 +41,7 @@ namespace Belchfaa
 
             while(dr.Read())
             {
-                ListViewItem list = new ListViewItem(dr[1].ToString()+" $");
+                ListViewItem list = new ListViewItem(dr[1].ToString()+" L.E.");
 
                 list.SubItems.Add(dr[2].ToString() );
                

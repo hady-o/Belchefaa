@@ -18,7 +18,7 @@ namespace Belchfaa
         string ordb = "Data Source=orcl;User Id=scott;Password=tiger;";
         public static OracleConnection conn;
         OracleCommand cmd;
-       
+        
         public FirstForm()
         {
             InitializeComponent();

@@ -42,9 +42,9 @@ namespace Belchfaa
         private void PaymentForm_Load(object sender, EventArgs e)
         {
             cHistory = new HistoryClassClass();
-            textBox1.Text = PaymentClass.subTotal.ToString() + " $";
-            textBox2.Text = (PaymentClass.subTotal*0.05).ToString() + " $";
-            textBox3.Text = (PaymentClass.subTotal*0.05 +PaymentClass.subTotal).ToString() + " $";
+            textBox1.Text = PaymentClass.subTotal.ToString() + " L.E.";
+            textBox2.Text = (PaymentClass.subTotal*0.05).ToString() + " L.E.";
+            textBox3.Text = (PaymentClass.subTotal*0.05 +PaymentClass.subTotal).ToString() + " L.E.";
             c = new CartClass();
         }
 
@@ -74,9 +74,9 @@ namespace Belchfaa
             }
             else
             {
-                MessageBox.Show("Your Process has been Confirmed successfuky");
+                MessageBox.Show("Your Process has been Confirmed successfully");
                 c.clearCart(CurrentUserClass.userId);
-                cHistory.addToHistory(CurrentUserClass.userId, (PaymentClass.subTotal * 0.05));
+                cHistory.addToHistory(CurrentUserClass.userId, (PaymentClass.subTotal * 0.05)+PaymentClass.subTotal);
                 this.Close();
                 new UserHomeForm().Show();
             }

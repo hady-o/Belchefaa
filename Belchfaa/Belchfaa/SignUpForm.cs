@@ -27,6 +27,7 @@ namespace Belchfaa
            
             register = new LoginAndRegister();
             textBox3.UseSystemPasswordChar = true;
+            textBox4.UseSystemPasswordChar = true;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -66,6 +67,11 @@ namespace Belchfaa
         {
 
             this.Close();
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
