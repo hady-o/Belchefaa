@@ -66,7 +66,7 @@ namespace Belchfaa
                     cart.increaseCartAmount(CurrentUserClass.userId, CurrentMed.medId, CurrentMed.medAmount, int.Parse(textBox5.Text.ToString()));
                        
                     }
-
+                //hdy
 
             }
         }
@@ -130,6 +130,16 @@ private void textBox5_TextChanged(object sender, EventArgs e)
                     break;
             }
             
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -43,5 +43,10 @@ namespace Belchfaa
         {
             adminClass.saveData(dataSet);
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

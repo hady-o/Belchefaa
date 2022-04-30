@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Belchfaa</RootNamespace>
     <AssemblyName>Belchfaa</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -239,6 +239,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\not say.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log&amp;slogan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_tex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singup_tex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_ic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
