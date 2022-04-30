@@ -94,7 +94,7 @@ namespace Belchfaa
 
             if (r!=-1)
             {
-                MessageBox.Show("inserted succsesfully");
+                MessageBox.Show("Inserted succsesfully");
             }
             conn.Dispose();
 

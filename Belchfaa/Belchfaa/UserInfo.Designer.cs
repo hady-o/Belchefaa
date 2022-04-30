@@ -51,6 +51,58 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = System.Drawing.Color.Transparent;
+            label4.Font = new System.Drawing.Font("Berlin Sans FB", 20F);
+            label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            label4.Location = new System.Drawing.Point(536, 423);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(222, 44);
+            label4.TabIndex = 16;
+            label4.Text = "Your Password";
+            label4.UseCompatibleTextRendering = true;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = System.Drawing.Color.Transparent;
+            label3.Font = new System.Drawing.Font("Berlin Sans FB", 20F);
+            label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            label3.Location = new System.Drawing.Point(540, 224);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(145, 44);
+            label3.TabIndex = 15;
+            label3.Text = "Your Age";
+            label3.UseCompatibleTextRendering = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            label2.Font = new System.Drawing.Font("Berlin Sans FB", 20F);
+            label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            label2.Location = new System.Drawing.Point(540, 121);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(177, 44);
+            label2.TabIndex = 14;
+            label2.Text = "Your Name";
+            label2.UseCompatibleTextRendering = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label1.Font = new System.Drawing.Font("Berlin Sans FB", 20F);
+            label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            label1.Location = new System.Drawing.Point(540, 25);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(120, 44);
+            label1.TabIndex = 12;
+            label1.Text = "Your ID";
+            label1.UseCompatibleTextRendering = true;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
@@ -91,7 +143,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(333, 699);
             this.panel1.TabIndex = 11;
@@ -102,7 +154,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Belchfaa.Properties.Resources.logo_w;
             this.pictureBox1.Location = new System.Drawing.Point(31, 55);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(253, 213);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -161,58 +213,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(251, 35);
             this.textBox2.TabIndex = 17;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = System.Drawing.Color.Transparent;
-            label4.Font = new System.Drawing.Font("Berlin Sans FB", 20F);
-            label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            label4.Location = new System.Drawing.Point(536, 423);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(222, 44);
-            label4.TabIndex = 16;
-            label4.Text = "Your Password";
-            label4.UseCompatibleTextRendering = true;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = System.Drawing.Color.Transparent;
-            label3.Font = new System.Drawing.Font("Berlin Sans FB", 20F);
-            label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            label3.Location = new System.Drawing.Point(540, 224);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(145, 44);
-            label3.TabIndex = 15;
-            label3.Text = "Your Age";
-            label3.UseCompatibleTextRendering = true;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = System.Drawing.Color.Transparent;
-            label2.Font = new System.Drawing.Font("Berlin Sans FB", 20F);
-            label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            label2.Location = new System.Drawing.Point(540, 121);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(177, 44);
-            label2.TabIndex = 14;
-            label2.Text = "Your Name";
-            label2.UseCompatibleTextRendering = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = System.Drawing.Color.Transparent;
-            label1.Font = new System.Drawing.Font("Berlin Sans FB", 20F);
-            label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            label1.Location = new System.Drawing.Point(540, 25);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(115, 44);
-            label1.TabIndex = 12;
-            label1.Text = "Your Id";
-            label1.UseCompatibleTextRendering = true;
             // 
             // textBox1
             // 

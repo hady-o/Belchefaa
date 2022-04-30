@@ -162,7 +162,7 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(380, 699);
             this.panel1.TabIndex = 7;
@@ -173,7 +173,7 @@
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::Belchfaa.Properties.Resources.search_ic;
             this.pictureBox2.Location = new System.Drawing.Point(305, 555);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(49, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -211,7 +211,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.textBox1.Location = new System.Drawing.Point(17, 555);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(277, 35);
             this.textBox1.TabIndex = 9;
@@ -222,12 +222,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(77, 245);
+            this.label1.Location = new System.Drawing.Point(92, 245);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 27);
+            this.label1.Size = new System.Drawing.Size(177, 27);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Wellcome Back";
+            this.label1.Text = "Welcome back, ";
             // 
             // label3
             // 
@@ -265,7 +265,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Belchfaa.Properties.Resources.logo_w;
             this.pictureBox1.Location = new System.Drawing.Point(1109, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(293, 258);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -36,7 +36,7 @@ namespace Belchfaa
             int r = cmd.ExecuteNonQuery();
             if (r != -1)
             {
-                MessageBox.Show("data has been updated successfully");
+                MessageBox.Show("Data has been updated successfully");
             }
 
         }

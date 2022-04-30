@@ -57,8 +57,8 @@ namespace Belchfaa
                 textBox3.Text = "";
                 textBox4.Text = "";
                 comboBox1.Text = "";
-                MessageBox.Show("you have been registerd successfuly");
-                MessageBox.Show("your Id is: "+userId);
+                MessageBox.Show("You have been registerd successfully");
+                MessageBox.Show("Your ID is: "+userId);
             }
             conn.Dispose();
         }
@@ -95,14 +95,14 @@ namespace Belchfaa
                     }
                     else
                     {
-                        MessageBox.Show("Invaled Information");
+                        MessageBox.Show("Invalid Information");
                         return false;
                     }
                     dr.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Invaled Information");
+                    MessageBox.Show("Invalid Information");
                     dr.Close();
                     return false;
                 }

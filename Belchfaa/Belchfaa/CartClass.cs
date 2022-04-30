@@ -28,7 +28,7 @@ namespace Belchfaa
             if (r != -1)
             {
                 updateMedAmount(userId, medId, medAmount-amount);
-                MessageBox.Show("Item has been added successfuly");
+                MessageBox.Show("Item has been added successfully");
             }
             conn.Dispose();
 
@@ -53,7 +53,7 @@ namespace Belchfaa
                 if (r != -1)
                 {
                     updateMedAmount(userId, medId,oldAmount+medAmount );
-                    MessageBox.Show("Item has been removed successfuly");
+                    MessageBox.Show("Item has been removed successfully");
                 }
                 else
                 {

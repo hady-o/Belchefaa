@@ -51,12 +51,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 20F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(24, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(32, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 30);
+            this.label1.Size = new System.Drawing.Size(116, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "User Id";
+            this.label1.Text = "User ID";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -65,29 +64,28 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 20F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(24, 162);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(32, 199);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 30);
+            this.label2.Size = new System.Drawing.Size(149, 37);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
-            this.textBox1.Location = new System.Drawing.Point(82, 88);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Location = new System.Drawing.Point(109, 108);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(260, 29);
+            this.textBox1.Size = new System.Drawing.Size(345, 35);
             this.textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
-            this.textBox2.Location = new System.Drawing.Point(82, 210);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Location = new System.Drawing.Point(109, 258);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(260, 29);
+            this.textBox2.Size = new System.Drawing.Size(345, 35);
             this.textBox2.TabIndex = 3;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -100,10 +98,10 @@
             this.button1.Font = new System.Drawing.Font("Berlin Sans FB", 20F);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(157)))), ((int)(((byte)(179)))));
             this.button1.Image = global::Belchfaa.Properties.Resources.rad_btn;
-            this.button1.Location = new System.Drawing.Point(158, 289);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(211, 356);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 40);
+            this.button1.Size = new System.Drawing.Size(155, 49);
             this.button1.TabIndex = 4;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
@@ -117,10 +115,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Berlin Sans FB", 20F);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(43, 523);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(57, 644);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 34);
+            this.button2.Size = new System.Drawing.Size(149, 42);
             this.button2.TabIndex = 5;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = false;
@@ -133,17 +131,19 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(517, 568);
+            this.panel1.Size = new System.Drawing.Size(689, 699);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Belchfaa.Properties.Resources.login_tex;
-            this.pictureBox2.Location = new System.Drawing.Point(53, 124);
+            this.pictureBox2.Location = new System.Drawing.Point(71, 153);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(422, 379);
+            this.pictureBox2.Size = new System.Drawing.Size(563, 466);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -153,9 +153,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Berlin Sans FB", 20F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(85, 74);
+            this.label3.Location = new System.Drawing.Point(113, 91);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(263, 30);
+            this.label3.Size = new System.Drawing.Size(334, 37);
             this.label3.TabIndex = 7;
             this.label3.Text = "log in and order now..!";
             // 
@@ -163,12 +164,14 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Belchfaa.Properties.Resources.logo_w;
-            this.pictureBox1.Location = new System.Drawing.Point(886, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(1181, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(166, 166);
+            this.pictureBox1.Size = new System.Drawing.Size(221, 204);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // panel2
             // 
@@ -178,24 +181,25 @@
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Location = new System.Drawing.Point(594, 202);
+            this.panel2.Location = new System.Drawing.Point(792, 249);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(369, 342);
+            this.panel2.Size = new System.Drawing.Size(492, 421);
             this.panel2.TabIndex = 8;
             // 
             // SignInForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::Belchfaa.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1064, 568);
+            this.ClientSize = new System.Drawing.Size(1419, 699);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SignInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form4";

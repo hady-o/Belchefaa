@@ -50,6 +50,7 @@ namespace Belchfaa
 
         private void UserHomeForm_Load(object sender, EventArgs e)
         {
+            label2.Text = CurrentUserClass.userName;
             if (CurrentUserClass.gender.ToString() == "Male")
             {
                 picbox.Image = Properties.Resources.male;

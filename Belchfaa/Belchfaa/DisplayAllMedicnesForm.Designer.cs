@@ -31,7 +31,7 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.MedicineName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MedicinePrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.AvakiableAmount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.AvailableAmount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MedicineCategory = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -47,7 +47,7 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.MedicineName,
             this.MedicinePrice,
-            this.AvakiableAmount,
+            this.AvailableAmount,
             this.MedicineCategory});
             this.listView1.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.listView1.ForeColor = System.Drawing.Color.White;
@@ -72,10 +72,10 @@
             this.MedicinePrice.Text = "MedicinePrice";
             this.MedicinePrice.Width = 184;
             // 
-            // AvakiableAmount
+            // AvailableAmount
             // 
-            this.AvakiableAmount.Text = "AvakiableAmount";
-            this.AvakiableAmount.Width = 221;
+            this.AvailableAmount.Text = "AvailableAmount";
+            this.AvailableAmount.Width = 221;
             // 
             // MedicineCategory
             // 
@@ -167,7 +167,7 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader MedicineName;
         private System.Windows.Forms.ColumnHeader MedicinePrice;
-        private System.Windows.Forms.ColumnHeader AvakiableAmount;
+        private System.Windows.Forms.ColumnHeader AvailableAmount;
         private System.Windows.Forms.ColumnHeader MedicineCategory;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
