@@ -42,17 +42,19 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(262, 12);
+            this.panel1.Location = new System.Drawing.Point(349, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(595, 333);
+            this.panel1.Size = new System.Drawing.Size(793, 410);
             this.panel1.TabIndex = 4;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Belchfaa.Properties.Resources.log_slogan;
-            this.pictureBox1.Location = new System.Drawing.Point(70, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(93, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(474, 327);
+            this.pictureBox1.Size = new System.Drawing.Size(632, 402);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -64,9 +66,10 @@
             this.button1.Font = new System.Drawing.Font("Berlin Sans FB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(187)))), ((int)(((byte)(211)))));
             this.button1.Image = global::Belchfaa.Properties.Resources.rad_btn;
-            this.button1.Location = new System.Drawing.Point(478, 378);
+            this.button1.Location = new System.Drawing.Point(637, 465);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 54);
+            this.button1.Size = new System.Drawing.Size(184, 66);
             this.button1.TabIndex = 5;
             this.button1.Text = "log in";
             this.button1.UseVisualStyleBackColor = false;
@@ -79,9 +82,10 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 20F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(494, 446);
+            this.label1.Location = new System.Drawing.Point(659, 549);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 30);
+            this.label1.Size = new System.Drawing.Size(124, 37);
             this.label1.TabIndex = 6;
             this.label1.Text = "Sing up";
             this.label1.Click += new System.EventHandler(this.label1_Click_2);
@@ -93,9 +97,10 @@
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 529);
+            this.label2.Location = new System.Drawing.Point(16, 651);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 23);
+            this.label2.Size = new System.Drawing.Size(104, 27);
             this.label2.TabIndex = 7;
             this.label2.Text = "About us";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -107,28 +112,29 @@
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(65)))), ((int)(((byte)(76)))));
-            this.label3.Location = new System.Drawing.Point(996, 529);
+            this.label3.Location = new System.Drawing.Point(1328, 651);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 23);
+            this.label3.Size = new System.Drawing.Size(50, 27);
             this.label3.TabIndex = 8;
             this.label3.Text = "Exit";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // FirstForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(238)))), ((int)(((byte)(242)))));
             this.BackgroundImage = global::Belchfaa.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1064, 568);
+            this.ClientSize = new System.Drawing.Size(1419, 699);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FirstForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

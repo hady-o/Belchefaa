@@ -18,29 +18,28 @@ namespace Belchfaa
         public static int userAge;
         public static string userPassword;
 
-        OracleDataAdapter adapter;
-        OracleCommandBuilder commandBuilder;
-        DataSet ds;
         string ordb = "Data Source=orcl;User Id=scott;Password=tiger;";
-        public DataSet Getuser(DataGridView dataGridView)
+        OracleConnection conn;
+        public void update_user(ComboBox comboBox, TextBox textBox2, TextBox textBox3, TextBox textBox4)
         {
-            string cmd = "select * from users where users.userid = :id ";
-            adapter = new OracleDataAdapter(cmd, ordb);
-            adapter.SelectCommand.Parameters.Add("id", CurrentUserClass.userId);
-            ds = new DataSet();
-            adapter.Fill(ds);
-            dataGridView.DataSource = ds.Tables[0];
-            return ds;
+            conn = new OracleConnection(ordb);
+            conn.Open();
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "update users set gender =:gender , userName  =:name,userAge =:age , userPassword  =:password where userId =:Id ";
+            cmd.Parameters.Add("gender", comboBox.Text);
+            cmd.Parameters.Add("name", textBox2.Text);
+            cmd.Parameters.Add("age", textBox3.Text.ToString());
+            cmd.Parameters.Add("password", textBox4.Text);
+            cmd.Parameters.Add("Id", CurrentUserClass.userId);
+            
+            int r = cmd.ExecuteNonQuery();
+            if (r != -1)
+            {
+                MessageBox.Show("data has been updated successfully");
+            }
 
         }
-        public void saveData(DataSet ds)
-        {
-
-            commandBuilder = new OracleCommandBuilder(adapter);
-            adapter.Update(ds.Tables[0]);
-            MessageBox.Show("data has been updated successfully");
-        }
-
     }
 
     
