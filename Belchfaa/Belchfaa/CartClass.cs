@@ -28,7 +28,9 @@ namespace Belchfaa
             if (r != -1)
             {
                 updateMedAmount(userId, medId, medAmount-amount);
-                MessageBox.Show("Item has been added successfully");
+                msg mg = new msg();
+                mg.Load("Item has been added successfully");
+                mg.Show();
             }
             conn.Dispose();
 
@@ -53,17 +55,24 @@ namespace Belchfaa
                 if (r != -1)
                 {
                     updateMedAmount(userId, medId,oldAmount+medAmount );
-                    MessageBox.Show("Item has been removed successfully");
+                    msg mg = new msg();
+                    mg.Load("Item has been removed successfully");
+                    mg.Show();
                 }
                 else
                 {
-                    MessageBox.Show("You don't have this item");
+                    msg mg = new msg();
+                    mg.Load("You don't have this item");
+                    mg.Show();
+                   
                 }
                 conn.Dispose();
             }
             else
             {
-                MessageBox.Show("You don't have this item");
+                msg mg = new msg();
+                mg.Load("You don't have this item");
+                mg.Show();
             }
            
         }

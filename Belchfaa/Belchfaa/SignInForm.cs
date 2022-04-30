@@ -30,7 +30,9 @@ namespace Belchfaa
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                msg mg = new msg();
+                mg.Load(ex.Message);
+                mg.Show();
             }
         }
 

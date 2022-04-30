@@ -47,11 +47,16 @@ namespace Belchfaa
             {
                 if (textBox5.Text == "" || textBox5.Text == null)
             {
-                MessageBox.Show("please enter your quantity");
+                    msg mg = new msg();
+                    mg.Load(" please enter your quantity");
+                    mg.Show();
+                   
             }
             else if (int.Parse(textBox5.Text) > CurrentMed.medAmount || int.Parse(textBox5.Text) < 1)
             {
-                MessageBox.Show("Invalid quantity");
+                    msg mg = new msg();
+                    mg.Load(" Invalid quantity");
+                    mg.Show();
             }
             else
             {
@@ -72,8 +77,10 @@ namespace Belchfaa
         }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Invalid quantity");
-                }
+                msg mg = new msg();
+                mg.Load(" Invalid quantity");
+                mg.Show();
+            }
             this.Close();
             MedicineQuaryClass.serchForMedicine(CurrentMed.medName);
         }
@@ -94,7 +101,9 @@ private void textBox5_TextChanged(object sender, EventArgs e)
                 }
                 else if (int.Parse(textBox5.Text) < 1)
                 {
-                    MessageBox.Show("Invalid quantity");
+                    msg mg = new msg();
+                    mg.Load(" Invalid quantity");
+                    mg.Show();
                 }
                 else
                 {

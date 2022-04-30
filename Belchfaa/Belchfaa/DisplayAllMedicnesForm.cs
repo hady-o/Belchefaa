@@ -62,7 +62,9 @@ namespace Belchfaa
             }
            catch(Exception ex)
             {
-                MessageBox.Show("please select one item to display");
+                msg mg = new msg();
+                mg.Load("please select one item to display");
+                mg.Show();
             }
 
             

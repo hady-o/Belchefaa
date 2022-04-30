@@ -68,13 +68,18 @@ namespace Belchfaa
         {
             if(textBox4.Text=="")
             {
-                MessageBox.Show("please enter your location");
+                msg mg = new msg();
+                mg.Load("please enter your location");
+                mg.Show();
                 this.Close();
                 new PaymentForm().Show();  
             }
             else
             {
-                MessageBox.Show("Your Process has been Confirmed successfully");
+                msg mg = new msg();
+                mg.Load("Your Process has been Confirmed successfully");
+                mg.Show();
+             
                 c.clearCart(CurrentUserClass.userId);
                 cHistory.addToHistory(CurrentUserClass.userId, (PaymentClass.subTotal * 0.05)+PaymentClass.subTotal);
                 this.Close();

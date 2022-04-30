@@ -43,14 +43,18 @@ namespace Belchfaa
                 }
                 else
                 {
-                    MessageBox.Show("Not Found");
+                    msg mg = new msg();
+                    mg.Load("Not Found");
+                    mg.Show();
 
                 }
                 dr.Close();
             }
             else
             {
-                MessageBox.Show("Not Found");
+                msg mg = new msg();
+                mg.Load("Not Found");
+                mg.Show();
                 dr.Close();
 
             }
@@ -94,7 +98,9 @@ namespace Belchfaa
 
             if (r!=-1)
             {
-                MessageBox.Show("Inserted succsesfully");
+                msg mg = new msg();
+                mg.Load("Inserted succsesfully");
+                mg.Show();
             }
             conn.Dispose();
 

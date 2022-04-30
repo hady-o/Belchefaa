@@ -33,7 +33,9 @@ namespace Belchfaa
             textBox1.Text = PaymentClass.subTotal.ToString() + " L.E.";
             if(PaymentClass.subTotal==0)
             {
-                MessageBox.Show("Your cart is empty");
+                msg mg = new msg();
+                mg.Load("Your cart is empty");
+                mg.Show();
                 this.Close();
                 new UserHomeForm().Show();
             }
@@ -56,7 +58,9 @@ namespace Belchfaa
             }
             catch (Exception ex)
             {
-                MessageBox.Show("please select one item to display");
+                msg mg = new msg();
+                mg.Load("please select one item to display");
+                mg.Show();
             }
         }
 

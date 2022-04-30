@@ -32,7 +32,9 @@ namespace Belchfaa
             
             commandBuilder = new OracleCommandBuilder(adapter);
             adapter.Update(ds.Tables[0]);
-            MessageBox.Show("Data has been updated successfully");
+            msg mg = new msg();
+            mg.Load("Data has been updated successfully");
+            mg.Show();
         }
 
         public DataSet getusers(DataGridView dataGridView)

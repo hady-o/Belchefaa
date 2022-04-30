@@ -17,6 +17,7 @@ namespace Belchfaa
         string ordb = "Data Source=orcl;User Id=scott;Password=tiger;";
         public static OracleConnection conn;
         OracleCommand cmd;
+        
         public SignUpForm()
         {
             InitializeComponent();
@@ -49,11 +50,17 @@ namespace Belchfaa
             {
                 if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == ""||comboBox1.Text == "")
                 {
-                    MessageBox.Show("please fill all data");
+                    Text = "please fill all data";
+                    msg mg = new msg();
+                    mg.Load(Text);
+                    mg.Show();
                 }
                 else if (textBox3.Text != textBox4.Text)
                 {
-                    MessageBox.Show("wrong password confirmation");
+                    Text = "wrong password confirmation";
+                    msg mg = new msg();
+                    mg.Load(Text);
+                    mg.Show();
                 }
                 else
                 {
@@ -62,7 +69,9 @@ namespace Belchfaa
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                msg mg = new msg();
+                mg.Load(ex.Message);
+                mg.Show();
             }
         }
 
