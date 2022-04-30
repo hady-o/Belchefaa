@@ -32,7 +32,12 @@ namespace Belchfaa
             cmd.Parameters.Add("age", textBox3.Text.ToString());
             cmd.Parameters.Add("password", textBox4.Text);
             cmd.Parameters.Add("Id", CurrentUserClass.userId);
-            
+
+            CurrentUserClass.userName = textBox2.Text;
+            CurrentUserClass.gender = comboBox.Text;
+            CurrentUserClass.userAge = int.Parse(textBox3.Text.ToString());
+            CurrentUserClass.userPassword = textBox4.Text.ToString();
+
             int r = cmd.ExecuteNonQuery();
             if (r != -1)
             {
