@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +42,11 @@ namespace Belchfaa
 
         private void PaymentForm_Load(object sender, EventArgs e)
         {
+            string[] text = File.ReadAllLines("Governorates.txt");
+            foreach(string governorate in text)
+            {
+                comboBox1.Items.Add(governorate);
+            }
             cHistory = new HistoryClassClass();
             textBox1.Text = PaymentClass.subTotal.ToString() + " L.E.";
             textBox2.Text = (PaymentClass.subTotal*0.05).ToString() + " L.E.";
@@ -66,24 +72,24 @@ namespace Belchfaa
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if(textBox4.Text=="")
-            {
-                msg mg = new msg();
-                mg.Load("please enter your location");
-                mg.Show();
-                this.Close();
-                new PaymentForm().Show();  
-            }
-            else
+            if(comboBox1.SelectedIndex > -1 && textBox4.Text != "")
             {
                 msg mg = new msg();
                 mg.Load("Your Process has been Confirmed successfully");
                 mg.Show();
-             
+
                 c.clearCart(CurrentUserClass.userId);
-                cHistory.addToHistory(CurrentUserClass.userId, (PaymentClass.subTotal * 0.05)+PaymentClass.subTotal);
+                cHistory.addToHistory(CurrentUserClass.userId, (PaymentClass.subTotal * 0.05) + PaymentClass.subTotal);
                 this.Close();
                 new UserHomeForm().Show();
+            }
+            else
+            {              
+                msg mg = new msg();
+                mg.Load("please enter your location");
+                mg.Show();
+                this.Close();
+                new PaymentForm().Show();
             }
         }
 
@@ -91,6 +97,34 @@ namespace Belchfaa
         {
             this.Close();
             new UserHomeForm().Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex > -1 && textBox4.Text != "")
+            {
+                msg mg = new msg();
+                mg.Load("Your Process has been Confirmed successfully");
+                mg.Show();
+
+                c.clearCart(CurrentUserClass.userId);
+                cHistory.addToHistory(CurrentUserClass.userId, (PaymentClass.subTotal * 0.05) + PaymentClass.subTotal);
+                this.Close();
+                new UserHomeForm().Show();
+            }
+            else
+            {
+                msg mg = new msg();
+                mg.Load("please enter your location");
+                mg.Show();
+                this.Close();
+                new PaymentForm().Show();
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

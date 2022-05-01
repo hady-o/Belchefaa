@@ -24,6 +24,7 @@ namespace Belchfaa
 
         private void AdminDisplayAllMedicinesForm_Load(object sender, EventArgs e)
         {
+            comboBox1.Items.Add(": )"); //Just for testing
            adminClass = new AdminClass();
            dataSet = adminClass.getMedicines(dataGridView1);
         }
@@ -52,6 +53,11 @@ namespace Belchfaa
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dataSet = adminClass.getMedicineByCategory(dataGridView1, comboBox1.Text);
         }
     }
 }

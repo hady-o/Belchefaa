@@ -26,10 +26,18 @@ namespace Belchfaa
             return ds;
             
         }
-
-        public void saveData(DataSet ds)
+        public DataSet getMedicineByCategory(DataGridView data, string selected_item)
         {
-            
+            string cmd = "select * FROM medicines where medcategory = :category";
+            adapter = new OracleDataAdapter(cmd, ordb);
+            ds = new DataSet();
+            adapter.SelectCommand.Parameters.Add("category", selected_item);
+            adapter.Fill(ds);
+            data.DataSource = ds.Tables[0];
+            return ds;
+        }
+        public void saveData(DataSet ds)
+        {            
             commandBuilder = new OracleCommandBuilder(adapter);
             adapter.Update(ds.Tables[0]);
             msg mg = new msg();
