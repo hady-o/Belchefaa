@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
 
 namespace Belchfaa
 {
@@ -21,10 +22,18 @@ namespace Belchfaa
             conn.Open();
             OracleCommand cmd4 = new OracleCommand();
             cmd4.Connection = conn;
-
-            cmd4.CommandText = @"select * from medicines  
-                where upper(medName) like upper(:name)";
-            cmd4.Parameters.Add("name", name); 
+            cmd4.CommandText = @"select * 
+                             from medicines
+                             where upper(medname) like upper(:name)";
+            cmd4.Parameters.Add("name", name);
+            //cmd4.CommandText = "GetMedicine";
+            //cmd4.CommandType = CommandType.StoredProcedure;
+            //cmd4.Parameters.Add("id",OracleDbType.Int32, ParameterDirection.Output);
+            //cmd4.Parameters.Add("name",OracleDbType.Varchar2, ParameterDirection.InputOutput);
+            //cmd4.Parameters.Add("description", OracleDbType.Varchar2, ParameterDirection.Output); 
+            //cmd4.Parameters.Add("price", OracleDbType.Double, ParameterDirection.Output); 
+            //cmd4.Parameters.Add("amount", OracleDbType.Int32, ParameterDirection.Output); 
+            //cmd4.Parameters.Add("category", OracleDbType.Varchar2, ParameterDirection.Output); 
 
 
             OracleDataReader dr = cmd4.ExecuteReader();
@@ -70,8 +79,9 @@ namespace Belchfaa
             conn.Open();
             OracleCommand cmd4 = new OracleCommand();
             cmd4.Connection = conn;
-            cmd4.CommandText = "select * from medicines";
-           
+            cmd4.CommandText = "GetAllMeds";
+            cmd4.CommandType = CommandType.StoredProcedure;
+            cmd4.Parameters.Add("id", OracleDbType.RefCursor, ParameterDirection.Output);
             OracleDataReader dr = cmd4.ExecuteReader();
             return dr;
 

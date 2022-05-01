@@ -180,7 +180,9 @@ namespace Belchfaa
                 }
                 else
                 {
-                    MessageBox.Show("Invalid Amount");
+                    msg mg = new msg();
+                    mg.Load("Invalid Amount");
+                    mg.Show();
                 }
                 
             }
@@ -235,7 +237,9 @@ namespace Belchfaa
             }
             else
             {
-                MessageBox.Show("You don't have this item");
+                msg mg = new msg();
+                mg.Load("You don't have this item");
+                mg.Show();
             }
             conn.Dispose();
             

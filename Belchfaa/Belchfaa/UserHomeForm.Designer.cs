@@ -62,9 +62,9 @@
             this.button1.Location = new System.Drawing.Point(731, 235);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 47);
+            this.button1.Size = new System.Drawing.Size(231, 47);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Display All medicines";
+            this.button1.Text = "Display Medicines";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -80,7 +80,7 @@
             this.button2.Location = new System.Drawing.Point(731, 316);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(211, 47);
+            this.button2.Size = new System.Drawing.Size(231, 47);
             this.button2.TabIndex = 1;
             this.button2.Text = "Make Order";
             this.button2.UseVisualStyleBackColor = false;
@@ -94,7 +94,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(83, 423);
+            this.button3.Location = new System.Drawing.Point(83, 410);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(165, 42);
@@ -115,7 +115,7 @@
             this.button4.Location = new System.Drawing.Point(731, 396);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(211, 47);
+            this.button4.Size = new System.Drawing.Size(231, 47);
             this.button4.TabIndex = 3;
             this.button4.Text = "Cart";
             this.button4.UseVisualStyleBackColor = false;
@@ -133,7 +133,7 @@
             this.button5.Location = new System.Drawing.Point(731, 476);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(211, 47);
+            this.button5.Size = new System.Drawing.Size(231, 47);
             this.button5.TabIndex = 4;
             this.button5.Text = "History";
             this.button5.UseVisualStyleBackColor = false;
@@ -179,6 +179,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label4
             // 
@@ -186,7 +187,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(56, 494);
+            this.label4.Location = new System.Drawing.Point(17, 486);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(213, 27);
@@ -251,10 +252,10 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(157)))), ((int)(((byte)(179)))));
-            this.button6.Location = new System.Drawing.Point(83, 366);
+            this.button6.Location = new System.Drawing.Point(83, 347);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(186, 44);
+            this.button6.Size = new System.Drawing.Size(180, 44);
             this.button6.TabIndex = 6;
             this.button6.Text = " Your Profile";
             this.button6.UseVisualStyleBackColor = false;

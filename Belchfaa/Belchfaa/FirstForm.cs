@@ -96,5 +96,10 @@ namespace Belchfaa
         {
             this.Close();
         }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

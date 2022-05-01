@@ -12,6 +12,7 @@ namespace Belchfaa
 {
     public partial class UserHomeForm : Form
     {
+        MedicineQuaryClass MedicineQuaryClass=new MedicineQuaryClass();
         public UserHomeForm()
         {
             InitializeComponent();
@@ -95,6 +96,15 @@ namespace Belchfaa
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (MedicineQuaryClass.serchForMedicine(textBox1.Text))
+            {
+                CurrentData.posistion = 0;
+                this.Close();
+            }
         }
     }
 }

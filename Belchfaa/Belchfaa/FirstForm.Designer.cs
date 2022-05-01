@@ -43,7 +43,7 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(349, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(793, 410);
             this.panel1.TabIndex = 4;
@@ -52,7 +52,7 @@
             // 
             this.pictureBox1.Image = global::Belchfaa.Properties.Resources.log_slogan;
             this.pictureBox1.Location = new System.Drawing.Point(93, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(632, 402);
             this.pictureBox1.TabIndex = 0;
@@ -67,13 +67,14 @@
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(187)))), ((int)(((byte)(211)))));
             this.button1.Image = global::Belchfaa.Properties.Resources.rad_btn;
             this.button1.Location = new System.Drawing.Point(637, 465);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(184, 66);
             this.button1.TabIndex = 5;
             this.button1.Text = "log in";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // label1
             // 
@@ -87,7 +88,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 37);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Sing up";
+            this.label1.Text = "Sign up";
             this.label1.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // label2

@@ -47,9 +47,10 @@ namespace Belchfaa
             {
                 if (textBox5.Text == "" || textBox5.Text == null)
             {
-                    msg mg = new msg();
-                    mg.Load(" please enter your quantity");
-                    mg.Show();
+                    //msg mg = new msg();
+                    //mg.Load(" please enter your quantity");
+                    //mg.Show();
+                    MessageBox.Show("please enter quantity");
                    
             }
             else if (int.Parse(textBox5.Text) > CurrentMed.medAmount || int.Parse(textBox5.Text) < 1)
@@ -149,6 +150,12 @@ private void textBox5_TextChanged(object sender, EventArgs e)
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new UserHomeForm().Show();
         }
     }
 }

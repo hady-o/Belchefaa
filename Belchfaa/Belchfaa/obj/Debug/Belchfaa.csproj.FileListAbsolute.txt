@@ -150,3 +150,4 @@ C:\Users\Hany\Desktop\Github\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.User
 C:\Users\Hady Ahmed\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.UserInfo.resources
 C:\Users\Lenovo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.UserInfo.resources
 C:\Users\Hany\Desktop\Github\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.msg.resources
+C:\Users\Lenovo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.msg.resources
