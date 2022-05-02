@@ -176,3 +176,6 @@ C:\Users\mhait\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.c
 C:\Users\mhait\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.csproj.CoreCompileInputs.cache
 C:\Users\mhait\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.exe
 C:\Users\mhait\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.pdb
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.AboutUs.resources
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.msg.resources
+C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.UserInfo.resources

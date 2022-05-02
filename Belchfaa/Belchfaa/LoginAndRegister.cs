@@ -59,8 +59,9 @@ namespace Belchfaa
                 comboBox1.Text = "";
            
                 msg mg = new msg();
-                mg.Load("You have been registerd successfully and Your ID is: "+userId);
-                mg.Show();
+                MessageBox.Show("You have been registerd successfully and Your ID is: " + userId);
+               // mg.Load("You have been registerd successfully and Your ID is: "+userId);
+               // mg.Show();
             }
             conn.Dispose();
         }

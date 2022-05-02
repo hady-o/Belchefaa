@@ -79,7 +79,7 @@ namespace Belchfaa
                 mg.Show();
 
                 c.clearCart(CurrentUserClass.userId);
-                cHistory.addToHistory(CurrentUserClass.userId, (PaymentClass.subTotal * 0.05) + PaymentClass.subTotal);
+                //cHistory.addToHistory(CurrentUserClass.userId, (PaymentClass.subTotal * 0.05) + PaymentClass.subTotal,);
                 this.Close();
                 new UserHomeForm().Show();
             }
@@ -108,7 +108,7 @@ namespace Belchfaa
                 mg.Show();
 
                 c.clearCart(CurrentUserClass.userId);
-                cHistory.addToHistory(CurrentUserClass.userId, (PaymentClass.subTotal * 0.05) + PaymentClass.subTotal);
+                //cHistory.addToHistory(CurrentUserClass.userId, (PaymentClass.subTotal * 0.05) + PaymentClass.subTotal);
                 this.Close();
                 new UserHomeForm().Show();
             }

@@ -157,5 +157,41 @@ private void textBox5_TextChanged(object sender, EventArgs e)
             this.Close();
             new UserHomeForm().Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (textBox5.Text == "")
+                {
+                    cart.removefromCart(CurrentUserClass.userId, CurrentMed.medId, CurrentMed.medAmount);
+
+                }
+                else if (int.Parse(textBox5.Text) < 1)
+                {
+                    msg mg = new msg();
+                    mg.Load(" Invalid quantity");
+                    mg.Show();
+                }
+                else
+                {
+
+                    cart.decreaseCartAmount(CurrentUserClass.userId, CurrentMed.medId, CurrentMed.medAmount, int.Parse(textBox5.Text.ToString()));
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            this.Close();
+            MedicineQuaryClass.serchForMedicine(CurrentMed.medName);
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            new DisplayCartForm().Show();
+        }
     }
 }
