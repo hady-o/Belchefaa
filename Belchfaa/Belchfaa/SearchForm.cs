@@ -33,6 +33,7 @@ namespace Belchfaa
             
             if(MedicineQuaryClass.serchForMedicine(textBox1.Text))
             {
+
                 CurrentData.posistion = 0;
                 this.Close();
             }

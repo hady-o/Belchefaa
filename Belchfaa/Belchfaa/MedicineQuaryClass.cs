@@ -24,19 +24,60 @@ namespace Belchfaa
             cmd4.Connection = conn;
             cmd4.CommandText = "GetMed2";
             cmd4.CommandType = CommandType.StoredProcedure;
-
+         
             cmd4.Parameters.Add("id", OracleDbType.Int32, ParameterDirection.Output);
             cmd4.Parameters.Add("name", name);
-            cmd4.Parameters.Add("description", OracleDbType.Varchar2, ParameterDirection.Output);
             cmd4.Parameters.Add("price", OracleDbType.Double, ParameterDirection.Output);
             cmd4.Parameters.Add("amount", OracleDbType.Int32, ParameterDirection.Output);
-            cmd4.Parameters.Add("category", OracleDbType.Varchar2, ParameterDirection.Output);
-            //cmd4.CommandText = @"select * 
-            //                 from medicines
-            //                 where upper(medname) like upper(:name)";
-            //cmd4.Parameters.Add("name", name);
+            cmd4.Parameters.Add("categoryId",  OracleDbType.Int32, ParameterDirection.Output);
+         
+                try
+                {
+                cmd4.ExecuteNonQuery();
+                CurrentMed.medId = int.Parse(cmd4.Parameters[0].Value.ToString());
+                CurrentMed.medName = cmd4.Parameters[1].Value.ToString();
 
-            cmd4.ExecuteNonQuery();
+                CurrentMed.medPrice = int.Parse(cmd4.Parameters[2].Value.ToString());
+                CurrentMed.medAmount = int.Parse(cmd4.Parameters[3].Value.ToString());
+             
+
+                switch (int.Parse(cmd4.Parameters[4].Value.ToString()))
+                {
+                    case 1:
+                        CurrentMed.medCategory = "cat1";
+                        break;
+                    case 2:
+                        CurrentMed.medCategory = "cat2";
+                        break;
+                    case 3:
+                        CurrentMed.medCategory = "cat3";
+                        break;
+                    case 4:
+                        CurrentMed.medCategory = "cat4";
+                        break;
+
+                      
+                }
+                found = true;
+                new MedDetailsForm().Show();
+
+
+
+            }
+            catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            
+            //else
+            //{
+            //    msg mg = new msg();
+            //    mg.Load("Not Found");
+            //    mg.Show();
+
+            //}
+
+
             //OracleDataReader dr=cmd4.ExecuteReader();
 
             //if (dr.Read())

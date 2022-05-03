@@ -43,6 +43,7 @@ namespace Belchfaa
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 if (textBox5.Text == "" || textBox5.Text == null)
@@ -83,6 +84,7 @@ namespace Belchfaa
                 mg.Show();
             }
             this.Close();
+            MessageBox.Show(CurrentMed.medName);
             MedicineQuaryClass.serchForMedicine(CurrentMed.medName);
         }
 
