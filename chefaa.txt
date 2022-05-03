@@ -15,7 +15,7 @@ drop table History cascade constraints;
 
 
 create table Medicines(
-medId number primary key,
+medId number primary key ,
 medName varchar(50) not null,
 desciption varchar(50) not null,
 medPrice number not null,
@@ -57,6 +57,8 @@ amount number not null
 commit;
 
 
+
+
 create or replace
 procedure GetAllMeds(MID OUT sys_refcursor)
 AS
@@ -64,5 +66,3 @@ begin
 OPEN mid for
 SELECT * from medicines;
 end;
-
-commit;
