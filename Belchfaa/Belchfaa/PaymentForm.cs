@@ -72,6 +72,7 @@ namespace Belchfaa
 
         private void button3_Click(object sender, EventArgs e)
         {
+            int id = 0;
             if(comboBox1.SelectedIndex > -1 && textBox4.Text != "")
             {
                 msg mg = new msg();
@@ -79,7 +80,12 @@ namespace Belchfaa
                 mg.Show();
 
                 c.clearCart(CurrentUserClass.userId);
-                //cHistory.addToHistory(CurrentUserClass.userId, (PaymentClass.subTotal * 0.05) + PaymentClass.subTotal,);
+                id =  cHistory.addToHistory(CurrentUserClass.userId, (PaymentClass.subTotal * 0.05) + PaymentClass.subTotal);
+
+                for (int i = 0; i < CurrentData.medIds.Count; i++)
+                {
+                    cHistory.addMedToHistory(id, CurrentData.medIds[i],CurrentData.medAmounts[i]);
+                }
                 this.Close();
                 new UserHomeForm().Show();
             }
@@ -108,7 +114,7 @@ namespace Belchfaa
                 mg.Show();
 
                 c.clearCart(CurrentUserClass.userId);
-                //cHistory.addToHistory(CurrentUserClass.userId, (PaymentClass.subTotal * 0.05) + PaymentClass.subTotal);
+                cHistory.addToHistory(CurrentUserClass.userId, (PaymentClass.subTotal * 0.05) + PaymentClass.subTotal);
                 this.Close();
                 new UserHomeForm().Show();
             }

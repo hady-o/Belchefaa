@@ -179,3 +179,31 @@ C:\Users\mhait\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.p
 C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.AboutUs.resources
 C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.msg.resources
 C:\Users\ayamo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.UserInfo.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\bin\Debug\Belchfaa.exe.config
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\bin\Debug\Belchfaa.exe
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\bin\Debug\Belchfaa.pdb
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\bin\Debug\Oracle.DataAccess.dll
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.csproj.AssemblyReference.cache
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.csproj.SuggestedBindingRedirects.cache
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.AboutUs.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.AdminDisplayAllMedicinesForm.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.AdminHomeForm.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.DisplayAllUsersForm.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.DisplayCartForm.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.FirstForm.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.HistoryForm.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.msg.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.PaymentForm.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.SignUpForm.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.SignInForm.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.UserHomeForm.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.SearchForm.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.DisplayAllMedicnesForm.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.MedDetailsForm.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.Properties.Resources.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.UserInfo.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.csproj.GenerateResource.cache
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.csproj.CoreCompileInputs.cache
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.csproj.CopyComplete
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.exe
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.pdb

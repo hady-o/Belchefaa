@@ -13,26 +13,65 @@ namespace Belchfaa
         string ordb = "Data Source=orcl;User Id=scott;Password=tiger;";
         public static OracleConnection conn;
         OracleCommand cmd;
-        public void addToHistory(int userId, double total,int amount,double price)
+        public int addToHistory(int userId, double total)
         {
+            int id = 0;
             conn = new OracleConnection(ordb);
             conn.Open();
             cmd = new OracleCommand();
             cmd.Connection = conn;
+            OracleCommand cmd2 = new OracleCommand();
+            cmd2.Connection = conn;
+            cmd2.CommandText = "select max (historyID) from userHistory";
+            OracleDataReader dr = cmd2.ExecuteReader();
             cmd.CommandText = @"insert into userHistory
-                                values(:userId,:total,:time,:amount,:price)";
+                                values(:Id, :userId, :total,:time)";
+            if (dr.Read())
+            {
+                if (!(dr[0].ToString().Equals("")))
+                {
+                    id = int.Parse(dr[0].ToString()) + 1;
+                    cmd.Parameters.Add("id", int.Parse(dr[0].ToString()) + 1);
+                }
+                else
+                {
+                    id = 1;
+                    cmd.Parameters.Add("id", 1);
+                }
+                dr.Close();
+               
+            }
+
+           
             cmd.Parameters.Add("userId", userId);
             cmd.Parameters.Add("total", total);
             cmd.Parameters.Add("time", DateTime.Now.ToString());
-            cmd.Parameters.Add("amount", amount);
-            cmd.Parameters.Add("price", price);
+          
             int r = cmd.ExecuteNonQuery();
            
+            conn.Dispose();
+            return id;
+        }
+
+        public void addMedToHistory(int hisId, int medId,int amount)
+        {
+            int id = 0;
+            conn = new OracleConnection(ordb);
+            conn.Open();
+            cmd = new OracleCommand();
+            cmd.Connection = conn;           
+            cmd.CommandText = @"insert into History
+                                values(:hisId, :medId, :amount)";
+            cmd.Parameters.Add("hisId", hisId);
+            cmd.Parameters.Add("medId", medId);
+            cmd.Parameters.Add("am", amount);
+            int r = cmd.ExecuteNonQuery();
             conn.Dispose();
         }
 
         public void selectHistory(int userId, ListView listView)
         {
+           
             conn = new OracleConnection(ordb);
             conn.Open();
             cmd = new OracleCommand();
@@ -50,8 +89,10 @@ namespace Belchfaa
                 list.SubItems.Add(dr[4].ToString() );
                
                 listView.Items.Add(list);
+              
             }
             conn.Dispose();
+         
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.DataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Belchfaa
 {
     public partial class DisplayCartForm : Form
     {
+        OracleDataReader dr;
         MedicineQuaryClass medicine;
         CartClass cart;
         public DisplayCartForm()
@@ -29,7 +31,7 @@ namespace Belchfaa
         {
             medicine = new MedicineQuaryClass();
             cart = new CartClass();
-            cart.displayCart(CurrentUserClass.userId, listView1,textBox1);
+            dr = cart.displayCart(CurrentUserClass.userId, listView1,textBox1);
             textBox1.Text = PaymentClass.subTotal.ToString() + " L.E.";
             if(PaymentClass.subTotal==0)
             {
@@ -71,6 +73,7 @@ namespace Belchfaa
 
         private void button2_Click(object sender, EventArgs e)
         {
+            CurrentData.currentDr = dr;
             this.Close();
             new PaymentForm().Show();
         }

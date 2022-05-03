@@ -77,8 +77,9 @@ namespace Belchfaa
            
         }
 
-        public void displayCart(int userId, ListView listview ,TextBox total)
+        public OracleDataReader displayCart(int userId, ListView listview ,TextBox total)
         {
+            List<ListViewItem> lis = new List<ListViewItem>();
             int totalPrice = 0;
             conn = new OracleConnection(ordb);
             conn.Open();
@@ -96,12 +97,16 @@ namespace Belchfaa
                 list.SubItems.Add(dr[4].ToString() +" L.E.");
                 list.SubItems.Add(dr[0].ToString() +" items");
                 list.SubItems.Add(dr[6].ToString());
+                
                 totalPrice += int.Parse(dr[4].ToString())*int.Parse(dr[0].ToString());
                 listview.Items.Add(list);
+                CurrentData.medIds.Add(int.Parse(dr[1].ToString()));
+                CurrentData.medAmounts.Add(int.Parse(dr[0].ToString()));
             }
             PaymentClass.subTotal=totalPrice;   
             dr.Close();
             conn.Dispose();
+            return dr;
         }
 
         public void updateMedAmount(int userId, int medId, int amount)
