@@ -40,7 +40,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 20F);
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(69)))));
             this.label1.Location = new System.Drawing.Point(12, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 37);
@@ -52,7 +52,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 20F);
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(69)))));
             this.label2.Location = new System.Drawing.Point(12, 261);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 37);
@@ -63,6 +63,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Berlin Sans FB", 20F);
             this.label3.Location = new System.Drawing.Point(657, 589);
             this.label3.Name = "label3";
@@ -103,12 +104,14 @@
             this.BackgroundImage = global::Belchfaa.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1401, 652);
+            this.ControlBox = false;
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AboutUs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AboutUs";

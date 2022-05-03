@@ -22,51 +22,52 @@ namespace Belchfaa
             conn.Open();
             OracleCommand cmd4 = new OracleCommand();
             cmd4.Connection = conn;
-            cmd4.CommandText = @"select * 
-                             from medicines
-                             where upper(medname) like upper(:name)";
+            cmd4.CommandText = "GetMed2";
+            cmd4.CommandType = CommandType.StoredProcedure;
+
+            cmd4.Parameters.Add("id", OracleDbType.Int32, ParameterDirection.Output);
             cmd4.Parameters.Add("name", name);
-            //cmd4.CommandText = "GetMedicine";
-            //cmd4.CommandType = CommandType.StoredProcedure;
-            //cmd4.Parameters.Add("id",OracleDbType.Int32, ParameterDirection.Output);
-            //cmd4.Parameters.Add("name",OracleDbType.Varchar2, ParameterDirection.InputOutput);
-            //cmd4.Parameters.Add("description", OracleDbType.Varchar2, ParameterDirection.Output); 
-            //cmd4.Parameters.Add("price", OracleDbType.Double, ParameterDirection.Output); 
-            //cmd4.Parameters.Add("amount", OracleDbType.Int32, ParameterDirection.Output); 
-            //cmd4.Parameters.Add("category", OracleDbType.Varchar2, ParameterDirection.Output); 
+            cmd4.Parameters.Add("description", OracleDbType.Varchar2, ParameterDirection.Output);
+            cmd4.Parameters.Add("price", OracleDbType.Double, ParameterDirection.Output);
+            cmd4.Parameters.Add("amount", OracleDbType.Int32, ParameterDirection.Output);
+            cmd4.Parameters.Add("category", OracleDbType.Varchar2, ParameterDirection.Output);
+            //cmd4.CommandText = @"select * 
+            //                 from medicines
+            //                 where upper(medname) like upper(:name)";
+            //cmd4.Parameters.Add("name", name);
 
+            cmd4.ExecuteNonQuery();
+            //OracleDataReader dr=cmd4.ExecuteReader();
 
-            OracleDataReader dr = cmd4.ExecuteReader();
+            //if (dr.Read())
+            //{
+            //    if (!(dr[0].ToString().Equals("")))
+            //    {
+            //        CurrentMed.medId = int.Parse(dr[0].ToString());
+            //        CurrentMed.medName = dr[1].ToString();
+            //        CurrentMed.medPrice = int.Parse(dr[3].ToString());
+            //        CurrentMed.medAmount = int.Parse(dr[4].ToString());
+            //        CurrentMed.medCategory = dr[5].ToString();
+            //        found = true;
+            //        new MedDetailsForm().Show();
+            //    }
+            //    else
+            //    {
+            //        msg mg = new msg();
+            //        mg.Load("Not Found");
+            //        mg.Show();
 
-            if (dr.Read())
-            {
-                if (!(dr[0].ToString().Equals("")))
-                {
-                    CurrentMed.medId = int.Parse(dr[0].ToString());
-                    CurrentMed.medName = dr[1].ToString();
-                    CurrentMed.medPrice = int.Parse(dr[3].ToString());
-                    CurrentMed.medAmount = int.Parse(dr[4].ToString());
-                    CurrentMed.medCategory = dr[5].ToString();
-                    found = true;
-                    new MedDetailsForm().Show();
-                }
-                else
-                {
-                    msg mg = new msg();
-                    mg.Load("Not Found");
-                    mg.Show();
+            //    }
+            //    dr.Close();
+            //}
+            //else
+            //{
+            //    msg mg = new msg();
+            //    mg.Load("Not Found");
+            //    mg.Show();
+            //    dr.Close();
 
-                }
-                dr.Close();
-            }
-            else
-            {
-                msg mg = new msg();
-                mg.Load("Not Found");
-                mg.Show();
-                dr.Close();
-
-            }
+            //}
             conn.Dispose();
             return found;   
 

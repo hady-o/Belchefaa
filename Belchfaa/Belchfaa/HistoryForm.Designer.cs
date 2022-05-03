@@ -35,13 +35,13 @@
             this.MedicineName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MedicinePrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ReciptId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.ReciptId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button1.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(92, 302);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -68,7 +68,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(0, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(333, 699);
             this.panel1.TabIndex = 9;
@@ -79,7 +79,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Belchfaa.Properties.Resources.logo_w;
             this.pictureBox1.Location = new System.Drawing.Point(31, 55);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(253, 213);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -94,7 +94,7 @@
             this.MedicinePrice,
             this.Amount,
             this.ReciptId});
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.listView1.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.listView1.ForeColor = System.Drawing.Color.White;
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
@@ -122,15 +122,20 @@
             this.Amount.Text = "Amount";
             this.Amount.Width = 150;
             // 
+            // ReciptId
+            // 
+            this.ReciptId.Text = "ReciptId";
+            this.ReciptId.Width = 150;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(157)))), ((int)(((byte)(179)))));
-            this.label1.Location = new System.Drawing.Point(356, 495);
+            this.label1.Location = new System.Drawing.Point(367, 498);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 29);
+            this.label1.Size = new System.Drawing.Size(123, 27);
             this.label1.TabIndex = 12;
             this.label1.Text = "Total Price";
             // 
@@ -149,11 +154,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(157)))), ((int)(((byte)(179)))));
             this.label2.Location = new System.Drawing.Point(875, 502);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 29);
+            this.label2.Size = new System.Drawing.Size(63, 27);
             this.label2.TabIndex = 14;
             this.label2.Text = "Time";
             // 
@@ -175,14 +180,14 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button2.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(157)))), ((int)(((byte)(179)))));
             this.button2.Location = new System.Drawing.Point(548, 608);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(168, 41);
             this.button2.TabIndex = 15;
-            this.button2.Text = "praviose";
+            this.button2.Text = "Previous";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
@@ -193,7 +198,7 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button3.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(157)))), ((int)(((byte)(179)))));
             this.button3.Location = new System.Drawing.Point(980, 608);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -203,11 +208,6 @@
             this.button3.Text = "Next";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // ReciptId
-            // 
-            this.ReciptId.Text = "ReciptId";
-            this.ReciptId.Width = 150;
             // 
             // HistoryForm
             // 

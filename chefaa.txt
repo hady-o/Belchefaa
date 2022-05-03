@@ -267,3 +267,12 @@ begin
 OPEN mid for
 SELECT * from medicines;
 end;
+
+
+create or replace procedure GetMed2(MedicineID out NUMBER,MedicineName in VARCHAR2,descr out VARCHAR2,MedicinePrice out NUMBER,MedicineAmount out NUMBER,MedicineCat out VARCHAR2)
+as
+begin
+SELECT meds.medid,meds.description,meds.medprice,meds.medamount,meds.medcategory INTO medicineid, descr, medicineprice, medicineamount, medicinecat
+from medicines meds
+where upper(meds.medname) like upper(medicinename);
+end;

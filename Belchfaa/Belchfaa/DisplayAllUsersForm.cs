@@ -22,7 +22,7 @@ namespace Belchfaa
         private void DisplayAllUsersForm_Load(object sender, EventArgs e)
         {
             adminClass = new AdminClass();
-            ds = adminClass.getusers(dataGridView1);
+            ds = adminClass.getusers(dataGridView2);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,12 +36,13 @@ namespace Belchfaa
             new AdminHomeForm().Show();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
