@@ -48,6 +48,8 @@ namespace Belchfaa
                 {
                     listView1.Items.Add(l[j][i]);
                 }
+                textBox1.Text = CurrentData.historyTotal[j].ToString();
+                textBox2.Text = CurrentData.historyTime[j].ToString();
             }
         }
 
@@ -78,6 +80,8 @@ namespace Belchfaa
                 {
                     listView1.Items.Add(l[j][i]);
                 }
+                textBox1.Text = CurrentData.historyTotal[j].ToString();
+                textBox2.Text = CurrentData.historyTime[j].ToString();
             }
             else
             {
@@ -97,11 +101,23 @@ namespace Belchfaa
                 {
                     listView1.Items.Add(l[j][i]);
                 }
+                textBox1.Text = CurrentData.historyTotal[j].ToString();
+                textBox2.Text = CurrentData.historyTime[j].ToString();
             }
             else
             {
                 MessageBox.Show("invalid");
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

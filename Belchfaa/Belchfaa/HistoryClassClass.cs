@@ -72,11 +72,13 @@ namespace Belchfaa
         public List<List<ListViewItem>> selectHistory(int userId)
         {
             List <List<ListViewItem>> l =new List <List<ListViewItem>>();
+            CurrentData.historyTotal.Clear();
+            CurrentData.historyTime.Clear();
             conn = new OracleConnection(ordb);
             conn.Open();
             cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = @"select uh.historyid
+            cmd.CommandText = @"select uh.historyid,uh.total ,uh.timep
                                 from userhistory uh
                                 where uh.userid = :userId";
             cmd.Parameters.Add("userId", userId);
@@ -104,7 +106,8 @@ namespace Belchfaa
                         
                 }
                 l.Add(l2);
-               
+                CurrentData.historyTotal.Add(double.Parse(dr[1].ToString())); 
+                CurrentData.historyTime.Add(dr[2].ToString()); 
                 dr2.Close();
             }
             //CurrentData.historyTotal = double.Parse(dr[1].ToString());
