@@ -69,30 +69,49 @@ namespace Belchfaa
             conn.Dispose();
         }
 
-        public void selectHistory(int userId, ListView listView)
+        public List<List<ListViewItem>> selectHistory(int userId)
         {
-           
+            List <List<ListViewItem>> l =new List <List<ListViewItem>>();
             conn = new OracleConnection(ordb);
             conn.Open();
             cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = @"select * from userHistory where userId=:userId";
+            cmd.CommandText = @"select uh.historyid
+                                from userhistory uh
+                                where uh.userid = :userId";
             cmd.Parameters.Add("userId", userId);
             OracleDataReader dr = cmd.ExecuteReader();
 
             while(dr.Read())
             {
-                ListViewItem list = new ListViewItem(dr[1].ToString()+" L.E.");
+                List<ListViewItem> l2 = new List<ListViewItem>();
+                OracleCommand cmd2 = new OracleCommand();
+                cmd2.Connection = conn;
+                cmd2.CommandText = @"select m.medname , m.medprice , h.amount
+                                    from userhistory uh, history h , medicines m
+                                    where uh.historyid =:hisId and uh.historyid = h.historyid and m.medid = h.medid";
+                cmd2.Parameters.Add("hisId", dr[0]);
+                OracleDataReader dr2 = cmd2.ExecuteReader();
 
-                list.SubItems.Add(dr[2].ToString() );
-                list.SubItems.Add(dr[3].ToString() );
-                list.SubItems.Add(dr[4].ToString() );
+                while (dr2.Read())
+                {
+
+                    ListViewItem list2 = new ListViewItem(dr2[0].ToString());
+
+                    list2.SubItems.Add(dr2[1].ToString());
+                    list2.SubItems.Add(dr2[2].ToString());
+                    l2.Add(list2);
+                        
+                }
+                l.Add(l2);
                
-                listView.Items.Add(list);
-              
+                dr2.Close();
             }
+            //CurrentData.historyTotal = double.Parse(dr[1].ToString());
+            //CurrentData.historyTime = dr[2].ToString();
+            dr.Close();
             conn.Dispose();
-         
+            return l;
         }
     }
 }

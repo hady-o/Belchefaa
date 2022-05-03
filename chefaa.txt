@@ -1,3 +1,19 @@
+drop SEQUENCE seqHistoryId;
+
+CREATE SEQUENCE seqHistoryId
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1;
+
+
+drop table medicines cascade constraints;
+drop table users cascade constraints;
+drop table cart cascade constraints;
+drop table userHistory cascade constraints;
+drop table History cascade constraints;
+
+
+
 create table Medicines(
 medId number primary key,
 medName varchar(50) not null,
@@ -25,16 +41,20 @@ constraint PK_D primary key (cartUserId, cartMedId)
 
 
 create table userHistory(
+historyID number  PRIMARY KEY ,
 userId number references users (userId),
 total number not null,
 timeP varchar(50) not null
 );
+commit;                     
 
+create table History(
+historyId number references userHistory (historyId),
+medId number references medicines (medId),
+amount number not null
+);
 
-
-insert into medicines values{1,'mid1','m',110,20,'o'};
-insert into medicines values{2,'mid2','s',120,10,'p'};
-insert into medicines values{3,'mid3','d',100,10,'q'};
+commit;
 
 
 create or replace
@@ -44,3 +64,5 @@ begin
 OPEN mid for
 SELECT * from medicines;
 end;
+
+commit;

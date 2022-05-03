@@ -79,6 +79,8 @@ namespace Belchfaa
 
         public OracleDataReader displayCart(int userId, ListView listview ,TextBox total)
         {
+            CurrentData.medAmounts.Clear();
+            CurrentData.medIds.Clear();
             List<ListViewItem> lis = new List<ListViewItem>();
             int totalPrice = 0;
             conn = new OracleConnection(ordb);
