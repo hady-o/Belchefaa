@@ -71,7 +71,6 @@ C:\Users\Lenovo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.
 C:\Users\Lenovo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.exe
 C:\Users\Lenovo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.pdb
 C:\Users\Lenovo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.AboutUs.resources
-<<<<<<< Updated upstream
 C:\Users\Hany\Desktop\Github\Belchefaa-main.zip\Belchfaa\Belchfaa\bin\Debug\Belchfaa.exe.config
 C:\Users\Hany\Desktop\Github\Belchefaa-main.zip\Belchfaa\Belchfaa\bin\Debug\Belchfaa.exe
 C:\Users\Hany\Desktop\Github\Belchefaa-main.zip\Belchfaa\Belchfaa\bin\Debug\Belchfaa.pdb
@@ -120,7 +119,6 @@ C:\Users\Hady Ahmed\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belch
 C:\Users\Hady Ahmed\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.MedDetailsForm.resources
 C:\Users\Hady Ahmed\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.Properties.Resources.resources
 C:\Users\Hady Ahmed\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.csproj.GenerateResource.Cache
->>>>>>> Stashed changes
 C:\Users\Hany\Desktop\Github\Belchefaa\Belchfaa\Belchfaa\bin\Debug\Belchfaa.exe.config
 C:\Users\Hany\Desktop\Github\Belchefaa\Belchfaa\Belchfaa\bin\Debug\Belchfaa.exe
 C:\Users\Hany\Desktop\Github\Belchefaa\Belchfaa\Belchfaa\bin\Debug\Belchfaa.pdb
@@ -247,3 +245,6 @@ C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa
 C:\Users\Lenovo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\bin\Debug\stdole.dll
 C:\Users\Lenovo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.medicinesExpireForm.resources
 C:\Users\Lenovo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.userInteractionsForm.resources
+C:\Users\Hady Ahmed\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.medicinesExpireForm.resources
+C:\Users\Hady Ahmed\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.msg.resources
+C:\Users\Hady Ahmed\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.userInteractionsForm.resources
