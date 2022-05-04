@@ -244,3 +244,6 @@ C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\bin\Debug\stdole.d
 C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.medicinesExpireForm.resources
 C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.userInteractionsForm.resources
+C:\Users\Lenovo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\bin\Debug\stdole.dll
+C:\Users\Lenovo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.medicinesExpireForm.resources
+C:\Users\Lenovo\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.userInteractionsForm.resources
