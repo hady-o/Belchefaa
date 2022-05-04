@@ -8,7 +8,7 @@ namespace Belchfaa
 {
     internal class PaymentClass
     {
-        public static int subTotal;
+        public static double subTotal;
 
     }
 }

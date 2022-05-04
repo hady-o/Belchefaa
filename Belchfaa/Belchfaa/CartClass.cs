@@ -82,7 +82,7 @@ namespace Belchfaa
             CurrentData.medAmounts.Clear();
             CurrentData.medIds.Clear();
             List<ListViewItem> lis = new List<ListViewItem>();
-            int totalPrice = 0;
+            double totalPrice = 0.0;
             conn = new OracleConnection(ordb);
             conn.Open();
             cmd = new OracleCommand();
@@ -100,7 +100,7 @@ namespace Belchfaa
                 list.SubItems.Add(dr[0].ToString() +" items");
                 list.SubItems.Add(dr[6].ToString());
                 
-                totalPrice += int.Parse(dr[4].ToString())*int.Parse(dr[0].ToString());
+                totalPrice += double.Parse(dr[4].ToString())*double.Parse(dr[0].ToString());
                 listview.Items.Add(list);
                 CurrentData.medIds.Add(int.Parse(dr[1].ToString()));
                 CurrentData.medAmounts.Add(int.Parse(dr[0].ToString()));
