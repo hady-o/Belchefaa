@@ -84,7 +84,7 @@ namespace Belchfaa
                 mg.Show();
             }
             this.Close();
-            MessageBox.Show(CurrentMed.medName);
+           
             MedicineQuaryClass.serchForMedicine(CurrentMed.medName);
         }
 

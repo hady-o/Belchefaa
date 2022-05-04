@@ -20,7 +20,8 @@ medName varchar(50) not null,
 desciption varchar(50) not null,
 medPrice number not null,
 medAmount number not null,
-medCategory varchar(50) not null
+medCategory varchar(50) not null,
+medCatId number not null
 );
 
 
@@ -46,7 +47,7 @@ userId number references users (userId) on delete cascade,
 total number not null,
 timeP varchar(50) not null
 );
-commit;                     
+                   
 
 create table History(
 historyId number references userHistory (historyId),
@@ -58,145 +59,21 @@ commit;
 
 
 
-
-create or replace
-procedure GetAllMeds(MID OUT sys_refcursor)
-AS
-begin
-OPEN mid for
-SELECT * from medicines;
-end;drop SEQUENCE seqHistoryId;
-
-CREATE SEQUENCE seqHistoryId
-MINVALUE 1
-START WITH 1
-INCREMENT BY 1;
-
-
-drop table medicines cascade constraints;
-drop table users cascade constraints;
-drop table cart cascade constraints;
-drop table userHistory cascade constraints;
-drop table History cascade constraints;
-
-
-
-create table Medicines(
-medId number primary key  ,
-medName varchar(50) not null,
-desciption varchar(50) not null,
-medPrice number not null,
-medAmount number not null,
-medCategory varchar(50) not null
-);
-
-
-create table users(
-userId number primary key,
-gender varchar(50) not null,
-userName varchar(50) not null,
-userAge number not NULL,
-userPassword varchar(50) not null);
-
-
-create table cart(
-cartUserId number references users (userId),
-cartMedId number references Medicines (medId) on delete cascade,
-amount number not null,
-constraint PK_D primary key (cartUserId, cartMedId)
-);
-
-
-create table userHistory(
-historyID number  PRIMARY KEY ,
-userId number references users (userId) on delete cascade,
-total number not null,
-timeP varchar(50) not null
-);
-commit;                     
-
-create table History(
-historyId number references userHistory (historyId),
-medId number references medicines (medId) on delete cascade,
-amount number not null
-);
-
-commit;
-
-
-
-
-create or replace
-procedure GetAllMeds(MID OUT sys_refcursor)
-AS
-begin
-OPEN mid for
-SELECT * from medicines;
-end;drop SEQUENCE seqHistoryId;
-
-CREATE SEQUENCE seqHistoryId
-MINVALUE 1
-START WITH 1
-INCREMENT BY 1;
-
-
-drop table medicines cascade constraints;
-drop table users cascade constraints;
-drop table cart cascade constraints;
-drop table userHistory cascade constraints;
-drop table History cascade constraints;
-
-
-
-create table Medicines(
-medId number primary key  ,
-medName varchar(50) not null,
-desciption varchar(50) not null,
-medPrice number not null,
-medAmount number not null,
-medCategory varchar(50) not null
-);
-
-
-create table users(
-userId number primary key,
-gender varchar(50) not null,
-userName varchar(50) not null,
-userAge number not NULL,
-userPassword varchar(50) not null);
-
-
-create table cart(
-cartUserId number references users (userId),
-cartMedId number references Medicines (medId) on delete cascade,
-amount number not null,
-constraint PK_D primary key (cartUserId, cartMedId)
-);
-
-
-create table userHistory(
-historyID number  PRIMARY KEY ,
-userId number references users (userId) on delete cascade,
-total number not null,
-timeP varchar(50) not null
-);
-commit;                     
-
-create table History(
-historyId number references userHistory (historyId),
-medId number references medicines (medId) on delete cascade,
-amount number not null
-);
-
-commit;
-
-
-
-
-create or replace procedure GetMed2(MedicineID out NUMBER,MedicineName in VARCHAR2,descr out VARCHAR2,MedicinePrice out NUMBER,MedicineAmount out NUMBER,MedicineCat out VARCHAR2)
+create or replace procedure GetMed2(MedicineID out NUMBER, mName in VARCHAR2,MedicinePrice out NUMBER, MedicineAmount out NUMBER, MedicineCat out number )
 as
 begin
-SELECT meds.medid,meds.description,meds.medprice,meds.medamount,meds.medcategory INTO medicineid, descr, medicineprice, medicineamount, medicinecat
+SELECT meds.medid ,meds.medprice, meds.medamount ,meds.medcatid
+INTO medicineid ,MedicinePrice, MedicineAmount ,MedicineCat
 from medicines meds
-where upper(meds.medname) like upper(medicinename);
+where upper(meds.medname) like upper(mname);
+end; 
+
+
+
+
+create or replace procedure GetAllMeds(MID OUT sys_refcursor)
+AS
+begin
+OPEN mid for
+SELECT * from medicines;
 end;

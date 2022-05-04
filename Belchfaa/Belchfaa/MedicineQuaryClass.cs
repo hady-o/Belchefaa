@@ -66,7 +66,7 @@ namespace Belchfaa
             }
             catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Not Found");
                 }
             
             //else
