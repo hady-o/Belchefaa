@@ -57,7 +57,7 @@ namespace Belchfaa
             else if (int.Parse(textBox5.Text) > CurrentMed.medAmount || int.Parse(textBox5.Text) < 1)
             {
                     msg mg = new msg();
-                    mg.Load(" Invalid quantity");
+                    mg.Load("Invalid quantity");
                     mg.Show();
             }
             else

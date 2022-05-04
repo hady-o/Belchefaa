@@ -163,6 +163,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Belchfaa.Properties.Resources.logo_w;
             this.pictureBox1.Location = new System.Drawing.Point(1181, 15);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);

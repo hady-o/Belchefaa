@@ -11,7 +11,7 @@ namespace Belchfaa
         public static int medId;
         public static string medName;
         public static string medCategory;
-        public static int medPrice;
+        public static double medPrice;
         public static int medAmount;
     }
 }

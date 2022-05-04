@@ -37,26 +37,43 @@ namespace Belchfaa
                 CurrentMed.medId = int.Parse(cmd4.Parameters[0].Value.ToString());
                 CurrentMed.medName = cmd4.Parameters[1].Value.ToString();
 
-                CurrentMed.medPrice = int.Parse(cmd4.Parameters[2].Value.ToString());
+                CurrentMed.medPrice = double.Parse(cmd4.Parameters[2].Value.ToString());
                 CurrentMed.medAmount = int.Parse(cmd4.Parameters[3].Value.ToString());
              
 
                 switch (int.Parse(cmd4.Parameters[4].Value.ToString()))
                 {
                     case 1:
-                        CurrentMed.medCategory = "cat1";
+                        CurrentMed.medCategory = "Medicines";
                         break;
                     case 2:
-                        CurrentMed.medCategory = "cat2";
+                        CurrentMed.medCategory = "Baby Care";
                         break;
                     case 3:
-                        CurrentMed.medCategory = "cat3";
+                        CurrentMed.medCategory = "Women Care";
                         break;
                     case 4:
-                        CurrentMed.medCategory = "cat4";
+                        CurrentMed.medCategory = "Men Care";
+                        break;
+                    case 5:
+                        CurrentMed.medCategory = "Hair Care";
+                        break;
+                    case 6:
+                        CurrentMed.medCategory = "Skin Care";
+                        break;
+                    case 7:
+                        CurrentMed.medCategory = "Oral Care";
+                        break;
+                    case 8:
+                        CurrentMed.medCategory = "Oraganic Prods.";
+                        break;
+                    case 9:
+                        CurrentMed.medCategory = "Med. Supplies";
+                        break;
+                    case 10:
+                        CurrentMed.medCategory = "Protection 101";
                         break;
 
-                      
                 }
                 found = true;
                 new MedDetailsForm().Show();
