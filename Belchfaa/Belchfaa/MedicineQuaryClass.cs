@@ -131,7 +131,23 @@ namespace Belchfaa
 
         }
 
+        public OracleDataReader medicineByCategory(string category)
+        {
+            conn = new OracleConnection(ordb);
+            conn.Open();
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "GetMedCategory";
+            cmd.CommandType = CommandType.StoredProcedure;
 
+            cmd.Parameters.Add("category", category);
+            cmd.Parameters.Add("id", OracleDbType.RefCursor, ParameterDirection.Output);
+
+
+            OracleDataReader dr = cmd.ExecuteReader();
+            return dr;
+
+        }
         public OracleDataReader allMedicines()
         {
             conn = new OracleConnection(ordb);

@@ -42,6 +42,7 @@ namespace Belchfaa
 
         private void PaymentForm_Load(object sender, EventArgs e)
         {
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             string[] text = File.ReadAllLines("Governorates.txt");
             foreach(string governorate in text)
             {
@@ -108,15 +109,9 @@ namespace Belchfaa
         private void button1_Click(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex > -1 && textBox4.Text != "")
-            {
-                msg mg = new msg();
-                mg.Load("Your Process has been Confirmed successfully");
-                mg.Show();
-
-                c.clearCart(CurrentUserClass.userId);
-                cHistory.addToHistory(CurrentUserClass.userId, (PaymentClass.subTotal * 0.05) + PaymentClass.subTotal);
+            {              
                 this.Close();
-                new UserHomeForm().Show();
+                new CreditPayment().Show();
             }
             else
             {

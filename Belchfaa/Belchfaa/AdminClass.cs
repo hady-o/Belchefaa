@@ -26,6 +26,16 @@ namespace Belchfaa
             return ds;
             
         }
+        public DataSet getMedicineByName(string name)
+        {
+            string cmd = "select * from medicines where upper(medname) = upper(:name)";
+            adapter = new OracleDataAdapter(cmd, ordb);
+            ds = new DataSet();
+            adapter.SelectCommand.Parameters.Add("name", name);
+            adapter.Fill(ds);
+            return ds;
+
+        }
         public DataSet getMedicineByCategory(DataGridView data, string selected_item)
         {
             string cmd = "select * FROM medicines where medcategory = :category";

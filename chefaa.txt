@@ -70,10 +70,21 @@ end;
 
 
 
-
 create or replace procedure GetAllMeds(MID OUT sys_refcursor)
 AS
 begin
 OPEN mid for
 SELECT * from medicines;
+end;
+
+
+
+create or replace
+procedure GetMedCategory(cat in VARCHAR2, allprop out sys_refcursor)
+as
+begin
+open allprop for
+select *
+from medicines
+where medcategory = cat;
 end;

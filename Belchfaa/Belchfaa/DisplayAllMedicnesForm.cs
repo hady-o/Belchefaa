@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,6 +28,13 @@ namespace Belchfaa
 
         private void Form7_Load(object sender, EventArgs e)
         {
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            string[] all_categories = File.ReadAllLines("Categories.txt");
+            foreach (string category in all_categories)
+            {
+                comboBox1.Items.Add(category);
+            }
+
             medicine = new MedicineQuaryClass();
             cart = new CartClass();
             OracleDataReader dr = medicine.allMedicines();
@@ -83,6 +91,42 @@ namespace Belchfaa
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            OracleDataReader dr = medicine.allMedicines();
+            listView1.Items.Clear();
+            while (dr.Read())
+            {
+                ListViewItem list = new ListViewItem(dr[1].ToString());
+
+                list.SubItems.Add(dr[3].ToString() + " L.E.");
+                list.SubItems.Add(dr[4].ToString() + " items");
+                list.SubItems.Add(dr[5].ToString());
+
+                listView1.Items.Add(list);
+
+            }
+            dr.Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OracleDataReader dr = medicine.medicineByCategory(comboBox1.Text);
+            listView1.Items.Clear();
+            while (dr.Read())
+            {
+                ListViewItem list = new ListViewItem(dr[1].ToString());
+
+                list.SubItems.Add(dr[3].ToString() + " L.E.");
+                list.SubItems.Add(dr[4].ToString() + " items");
+                list.SubItems.Add(dr[5].ToString());
+
+                listView1.Items.Add(list);
+
+            }
+            dr.Close();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,8 @@ namespace Belchfaa
 {
     public partial class AdminDisplayAllMedicinesForm : Form
     {
-        
+        MedicineQuaryClass medicine_name;
+
         AdminClass adminClass;
         DataSet dataSet;
         public AdminDisplayAllMedicinesForm()
@@ -24,9 +26,17 @@ namespace Belchfaa
 
         private void AdminDisplayAllMedicinesForm_Load(object sender, EventArgs e)
         {
-            comboBox1.Items.Add(": )"); //Just for testing
-           adminClass = new AdminClass();
-           dataSet = adminClass.getMedicines(dataGridView1);
+            medicine_name = new MedicineQuaryClass();
+            adminClass = new AdminClass();
+
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            // Add all categories from a text file
+            string[] all_categories = File.ReadAllLines("Categories.txt");
+            foreach(string category in all_categories)
+            {
+                comboBox1.Items.Add(category);
+            }
+            dataSet = adminClass.getMedicines(dataGridView1);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -58,6 +68,27 @@ namespace Belchfaa
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             dataSet = adminClass.getMedicineByCategory(dataGridView1, comboBox1.Text);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dataSet = adminClass.getMedicines(dataGridView1);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DataSet temp = adminClass.getMedicineByName(textBox1.Text);
+            if (temp.Tables[0].Rows.Count != 0)
+            {
+                dataSet = temp;
+                dataGridView1.DataSource = dataSet.Tables[0];
+            }
+            else
+            {
+                msg mg = new msg();
+                mg.Load("Not Found");
+                mg.Show();
+            }
         }
     }
 }
