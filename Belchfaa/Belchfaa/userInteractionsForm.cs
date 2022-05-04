@@ -46,6 +46,7 @@ namespace Belchfaa
 
         private void button1_Click(object sender, EventArgs e)
         {
+            cr.Refresh();
             cr.SetParameterValue(0, comboBox1.Text);
             crystalReportViewer1.ReportSource = cr;
         }

@@ -27,6 +27,12 @@ namespace Belchfaa
         private void medicinesExpireForm_Load(object sender, EventArgs e)
         {
             cr = new medicinesExpireCrystalReport();
+            //crystalReportViewer1.ReportSource = cr;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cr.Refresh();
             crystalReportViewer1.ReportSource = cr;
         }
     }

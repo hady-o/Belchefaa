@@ -133,6 +133,7 @@ namespace Belchfaa
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(157)))), ((int)(((byte)(179)))));
             this.BackgroundImage = global::Belchfaa.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1040, 568);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
@@ -141,6 +142,7 @@ namespace Belchfaa
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "userInteractionsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "userInteractionsForm";
             this.Load += new System.EventHandler(this.userInteractionsForm_Load);
             this.panel1.ResumeLayout(false);
