@@ -58,11 +58,10 @@ namespace Belchfaa
                 textBox3.Text = "";
                 textBox4.Text = "";
                 comboBox1.Text = "";
-           
+
                 msg mg = new msg();
-                MessageBox.Show("You have been registerd successfully and Your ID is: " + userId);
-               // mg.Load("You have been registerd successfully and Your ID is: "+userId);
-               // mg.Show();
+                mg.Load("You have been registerd successfully \n Your ID is: " + userId);
+                mg.Show();
             }
             conn.Dispose();
         }

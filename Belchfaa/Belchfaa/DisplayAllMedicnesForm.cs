@@ -109,6 +109,12 @@ namespace Belchfaa
                 listView1.Items.Add(list);
 
             }
+            if (listView1.Items.Count == 0)
+            {
+                msg mg = new msg();
+                mg.Load("There is no medicine now");
+                mg.Show();
+            }
             dr.Close();
         }
 
@@ -127,7 +133,14 @@ namespace Belchfaa
                 listView1.Items.Add(list);
 
             }
-            dr.Close();
+            if (listView1.Items.Count == 0)
+            {
+                msg mg = new msg();
+                mg.Load("This medicine doesn't exist");
+                mg.Show();
+            }
+                dr.Close();
+            
         }
     }
 }

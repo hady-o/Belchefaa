@@ -34,7 +34,7 @@ namespace Belchfaa
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private async void button3_Click(object sender, EventArgs e)
         {
             int id = 0;
             if(textBox1.TextLength == textBox1.MaxLength
@@ -58,10 +58,12 @@ namespace Belchfaa
             }
             else
             {
+               
+                this.Close();
                 msg mg = new msg();
                 mg.Load("Please enter your credit card info correctly");
                 mg.Show();
-                this.Close();
+                await Task.Delay(1000);
                 new CreditPayment().Show();
             }
         }

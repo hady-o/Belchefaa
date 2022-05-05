@@ -140,7 +140,9 @@ namespace Belchfaa
             int r = cmd.ExecuteNonQuery();
             if (r != -1)
             {
-                MessageBox.Show("Item amount has been increased by "+ amount);
+                msg mg = new msg();
+                mg.Load("Item amount has been increased by " + amount);
+                mg.Show();
                 updateMedAmount(userId, medId, medAmount - amount);
             }
             conn.Dispose();
@@ -176,12 +178,16 @@ namespace Belchfaa
                     int r = cmd.ExecuteNonQuery();
                     if (r != -1)
                     {
-                        MessageBox.Show("Item amount has been decreased by " + amount);
+                        msg mg = new msg();
+                        mg.Load("Item amount has been decreased by " + amount);
+                        mg.Show();
                         updateMedAmount(userId, medId, medAmount + amount);
                     }
                     else
                     {
-                        MessageBox.Show("Invaild process");
+                        msg mg = new msg();
+                        mg.Load("Invaild process " + amount);
+                        mg.Show();
                     }
                     conn.Dispose();
                 }
@@ -195,7 +201,9 @@ namespace Belchfaa
             }
             else
             {
-                MessageBox.Show("You dont have this item");
+                msg mg = new msg();
+                mg.Load("You dont have this item");
+                mg.Show();
             }
             
 

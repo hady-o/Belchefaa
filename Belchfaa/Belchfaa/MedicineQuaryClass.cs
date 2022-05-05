@@ -30,16 +30,16 @@ namespace Belchfaa
             cmd4.Parameters.Add("price", OracleDbType.Double, ParameterDirection.Output);
             cmd4.Parameters.Add("amount", OracleDbType.Int32, ParameterDirection.Output);
             cmd4.Parameters.Add("categoryId",  OracleDbType.Int32, ParameterDirection.Output);
-         
-                try
-                {
+
+            try
+            {
                 cmd4.ExecuteNonQuery();
                 CurrentMed.medId = int.Parse(cmd4.Parameters[0].Value.ToString());
                 CurrentMed.medName = cmd4.Parameters[1].Value.ToString();
 
                 CurrentMed.medPrice = double.Parse(cmd4.Parameters[2].Value.ToString());
                 CurrentMed.medAmount = int.Parse(cmd4.Parameters[3].Value.ToString());
-             
+
 
                 switch (int.Parse(cmd4.Parameters[4].Value.ToString()))
                 {
@@ -82,10 +82,12 @@ namespace Belchfaa
 
             }
             catch (Exception ex)
-                {
-                    MessageBox.Show("Not Found");
-                }
-            
+            {
+                msg mg = new msg();
+                mg.Load("Not Found");
+                mg.Show();
+            }
+
             //else
             //{
             //    msg mg = new msg();

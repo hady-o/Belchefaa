@@ -44,7 +44,7 @@ namespace Belchfaa
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -73,6 +73,7 @@ namespace Belchfaa
                 mg.Load(ex.Message);
                 mg.Show();
             }
+            await Task.Delay(2000);
         }
 
         private void button2_Click(object sender, EventArgs e)

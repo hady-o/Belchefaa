@@ -85,7 +85,9 @@ namespace Belchfaa
             }
             else
             {
-                MessageBox.Show("invalid");
+                msg mg = new msg();
+                mg.Load("invalid");
+                mg.Show();
             }
         }
 
@@ -106,7 +108,9 @@ namespace Belchfaa
             }
             else
             {
-                MessageBox.Show("invalid");
+                msg mg = new msg();
+                mg.Load("invalid");
+                mg.Show();
             }
         }
 

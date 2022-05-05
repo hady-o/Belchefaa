@@ -71,7 +71,7 @@ namespace Belchfaa
             new DisplayCartForm().Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private async void button3_Click(object sender, EventArgs e)
         {
             int id = 0;
             if(comboBox1.SelectedIndex > -1 && textBox4.Text != "")
@@ -92,10 +92,12 @@ namespace Belchfaa
             }
             else
             {              
+                
+                this.Close();
                 msg mg = new msg();
                 mg.Load("please enter your location");
                 mg.Show();
-                this.Close();
+                await Task.Delay(1000);
                 new PaymentForm().Show();
             }
         }
@@ -106,7 +108,7 @@ namespace Belchfaa
             new UserHomeForm().Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex > -1 && textBox4.Text != "")
             {              
@@ -115,10 +117,12 @@ namespace Belchfaa
             }
             else
             {
+                
+                this.Close();
                 msg mg = new msg();
                 mg.Load("please enter your location");
                 mg.Show();
-                this.Close();
+                await Task.Delay(1000);
                 new PaymentForm().Show();
             }
         }

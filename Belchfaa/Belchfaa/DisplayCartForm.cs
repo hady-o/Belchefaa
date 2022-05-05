@@ -27,7 +27,7 @@ namespace Belchfaa
             new UserHomeForm().Show();
         }
 
-        private void DisplayCartForm_Load(object sender, EventArgs e)
+        private async void DisplayCartForm_Load(object sender, EventArgs e)
         {
             medicine = new MedicineQuaryClass();
             cart = new CartClass();
@@ -35,10 +35,12 @@ namespace Belchfaa
             textBox1.Text = PaymentClass.subTotal.ToString() + " L.E.";
             if(PaymentClass.subTotal==0)
             {
+                
+                this.Close();
                 msg mg = new msg();
                 mg.Load("Your cart is empty");
                 mg.Show();
-                this.Close();
+                await Task.Delay(1000);
                 new UserHomeForm().Show();
             }
         }
