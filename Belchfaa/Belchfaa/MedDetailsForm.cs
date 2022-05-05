@@ -168,11 +168,15 @@ namespace Belchfaa
         private async void button4_Click(object sender, EventArgs e)
         {
             try
-            {
+            {       
                 if (textBox5.Text == "")
                 {
-                    cart.removefromCart(CurrentUserClass.userId, CurrentMed.medId, CurrentMed.medAmount);
-
+                    if (cart.removefromCart(CurrentUserClass.userId, CurrentMed.medId, CurrentMed.medAmount))
+                    {
+                        msg mg = new msg();
+                        mg.Load("Item has been removed successfully");
+                        mg.ShowDialog();
+                    }
                 }
                 else if (int.Parse(textBox5.Text) < 1)
                 {

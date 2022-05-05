@@ -36,7 +36,7 @@ namespace Belchfaa
 
         }
 
-        public void removefromCart(int userId, int medId ,int medAmount)
+        public bool removefromCart(int userId, int medId ,int medAmount)
         {
             int oldAmount=0;
             oldAmount = getCartAmount(userId, medId);
@@ -55,17 +55,17 @@ namespace Belchfaa
                 if (r != -1)
                 {
                     updateMedAmount(userId, medId,oldAmount+medAmount );
-                    msg mg = new msg();
-                    mg.Load("Item has been removed successfully");
-                    mg.ShowDialog();
+                    return true;
                 }
                 else
                 {
                     msg mg = new msg();
                     mg.Load("You don't have this item");
                     mg.ShowDialog();
+                    return false;
                    
                 }
+               
                 conn.Dispose();
             }
             else
@@ -73,7 +73,9 @@ namespace Belchfaa
                 msg mg = new msg();
                 mg.Load("You don't have this item");
                 mg.ShowDialog();
+                return false;
             }
+
            
         }
 
@@ -266,6 +268,9 @@ namespace Belchfaa
             {
                 removefromCart(CurrentUserClass.userId, CurrentData.medIds[i], CurrentData.allMedAmounts[i]);
             }
+            msg mg = new msg();
+            mg.Load("Item has been removed successfully");
+            mg.ShowDialog();
             return true;
 
         }
