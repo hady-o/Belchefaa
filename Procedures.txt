@@ -1,0 +1,29 @@
+create or replace procedure GetMed2(MedicineID out NUMBER, mName in VARCHAR2,MedicinePrice out NUMBER, MedicineAmount out NUMBER, MedicineCat out number )
+as
+begin
+SELECT meds.medid ,meds.medprice, meds.medamount ,meds.medcatid
+INTO medicineid ,MedicinePrice, MedicineAmount ,MedicineCat
+from medicines meds
+where upper(meds.medname) like upper(mname);
+end GetMed2; 
+
+
+
+create or replace procedure GetAllMeds(MID OUT sys_refcursor)
+AS
+begin
+OPEN mid for
+SELECT * from medicines;
+end GetAllMeds;
+
+
+
+create or replace
+procedure GetMedCategory(cat in VARCHAR2, allprop out sys_refcursor)
+as
+begin
+open allprop for
+select *
+from medicines
+where medcategory = cat;
+end GetMedCategory;

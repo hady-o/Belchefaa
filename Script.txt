@@ -1,0 +1,125 @@
+drop SEQUENCE seqHistoryId;
+drop table medicines cascade constraints;
+drop table users cascade constraints;
+drop table login cascade constraints;
+drop table cart cascade constraints;
+drop table userHistory cascade constraints;
+drop table History cascade constraints;
+
+
+CREATE SEQUENCE seqHistoryId
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1;
+
+create table Medicines(
+medId number primary key  ,
+medName varchar(50) not null,
+desciption varchar(50) not null,
+medPrice number not null,
+medAmount number not null,
+medCategory varchar(50) not null,
+medCatId number not null
+);
+
+
+create table users(
+userId number primary key,
+gender varchar(50) not null,
+userName varchar(50) not null,
+userAge number not NULL,
+userPassword varchar(50) not null);
+
+
+
+create table login(
+userId number not null,
+gender varchar(50) not null,
+userName varchar(50) not null,
+userAge number not NULL,
+userPassword varchar(50) not null);
+
+
+create table cart(
+cartUserId number references users (userId),
+cartMedId number references Medicines (medId) on delete cascade,
+amount number not null,
+constraint PK_D primary key (cartUserId, cartMedId)
+);
+
+
+create table userHistory(
+historyID number  PRIMARY KEY ,
+userId number references users (userId) on delete cascade,
+total number not null,
+timeP varchar(50) not null
+);
+                   
+
+create table History(
+historyId number references userHistory (historyId),
+medId number references medicines (medId) on delete cascade,
+amount number not null
+);
+
+commit;
+
+
+
+
+insert into medicines values(1,'Panadol','For treating moderate and severe migraines',19.5,200,'Medicines',1);
+insert into medicines values(2,'Abimol Extra','Analgesic and Antipyretic | 20 tab',9,150,'Medicines',1);
+insert into medicines values(3,'Hero Milk','400gm Lactose-free Infant',124,120,'Medicines',1);
+insert into medicines values(4,'Kenacomb','Cream | 30gm',24.5,90,'Medicines',1);
+insert into medicines values(5,'Bronchicum','Anti Cough | 100ml',35,170,'Medicines',1);
+insert into medicines values(6,'Cetal','Antiviral | 20caps',15,180,'Medicines',1);
+insert into medicines values(7,'Otrivin','Nasal Drops for Adult | 15ml',10,190,'Medicines',1);
+insert into medicines values(8,'Zyrtec','Treating Allergies | 10mg | 20 Tabs',39.75,145,'Medicines',1);
+insert into medicines values(9,'Closeup','Toothpaste Menthol Fresh - 120ml',28,300,'Oral Care',7);
+insert into medicines values(10,'Visine','Original Eye Drops | 15ml',13.5,210,'Medicines',1);
+insert into medicines values(11,'Molfix','7 Diapers Small Pack | Size 5',25,160,'Baby Care',2);
+insert into medicines values(12,'Milo','Baby Cream | 150gm',75,100,'Baby Care',2);
+insert into medicines values(13,'Rexona','Motion sense Deodorant',10,155,'Women Care',3);
+insert into medicines values(14,'Bobana','Shower Gel Madness | 500ml',25,85,'Women Care',3);
+insert into medicines values(15,'Johnsons','Gold Shampoo | 100ml',19,115,'Baby Care',2);
+insert into medicines values(16,'Axe Excite','Deodorant Body Spray - 150ml',58,135,'Men Care',4);
+insert into medicines values(17,'Nivea','Dry Impact Deodorant Spray | 150ml',50,165,'Men Care',4);
+insert into medicines values(18,'Gillette','Men’s Disposable Razors - 5 Pack',38,142,'Men Care',4);
+insert into medicines values(19,'Seropipe','spray 200 ml',150,60,'Hair Care',5);
+insert into medicines values(20,'Garnier','Color Naturals Crème Hair Color',55,85,'Hair Care',5);
+insert into medicines values(21,'Beurer','Weight Scale Glass Electronic | 180kg',799,100,'Med. Supplies',9);
+insert into medicines values(22,'Syringe','3 ml',2,300,'Med. Supplies',9);
+insert into medicines values(23,'Lifebuoy','Total 10 Soap | 125gm',9,250,'Protection 101',10);
+insert into medicines values(24,'Wipes','Dettol | Fresh Skin Wipes | 10s',19,220,'Protection 101',10);
+insert into medicines values(25,'Hand Gel','Secure Hand Gel | 75ml',20,215,'Protection 101',10);
+insert into medicines values(26,'Arthenia','Skin Cream | 20gm',85,140,'Skin Care',6);
+insert into medicines values(27,'Oral B 123','Toothbrush',18,135,'Oral Care',7);
+insert into medicines values(28,'Areej','Peppermint Cream | 200gm',150,50,'Organic Prods.',8);
+insert into medicines values(29,'Sensodyne','Action Nitro Toothpaste - 75ml',34,155,'Oral Care',7);
+insert into medicines values(30,'Fucidin','15 gm Cream',23,95,'Medicines',1);
+insert into medicines values(31,'C-retard','Vitamin C | 500mg | 10 Capsules',16,105,'Medicines',1);
+insert into medicines values(32,'Antinal','Treating Diarrhea | 24 Caps',21,205,'Medicines',1);
+insert into medicines values(33,'Glycerin','Infants | 5 Supps',5.3,198,'Medicines',1);
+insert into medicines values(34,'Physiomer','Strong Jet Nasal Spray | 210ml',110,75,'Medicines',1);
+insert into medicines values(35,'Eva','Skin Care | 100 ml',20,115,'Women Care',3);
+insert into medicines values(36,'OGX','Brazilian Keratin Conditioner | 385ml',250,185,'Hair Care',5);
+insert into medicines values(37,'Infinity','Care Sunscreen Mist SPF 50+ | 200ml',175,60,'Skin Care',6);
+insert into medicines values(38,'Beesline','Whitening and Lifting Facial Foam | 150ml',210,100,'Skin Care',6);
+insert into medicines values(39,'Oil House','Coffee Oil 30 Ml',120,155,'Organic Prods.',8);
+insert into medicines values(40,'Bless','Argan Oil | 50ml',185,177,'Organic Prods.',8);
+insert into users values(1, 'Male','Hadi', 20 ,'hadi' );
+insert into users values(2, 'Male','Haytham', 22 ,'h123' );
+insert into users values(3, 'Male','Hani', 21 ,'456' );
+insert into users values(4, 'Female','Aya', 23 ,'908' );
+insert into users values(5, 'Not Say','Alberto', 30 ,'alb12');
+insert into cart values(1,9,3);
+insert into cart values(2,5,4);
+insert into cart values(5,6,7);
+insert into cart values(3,4,5);
+insert into cart values(4,2,8);
+insert into userhistory values(1,1,208.6875,'5/6/2022 12:52:13 AM');
+insert into userhistory values(2,2,208.6875,'5/6/2022 12:52:13 AM');
+insert into userhistory values(3,3,208.6875,'5/6/2022 12:52:13 AM');
+insert into userhistory values(4,4,208.6875,'5/6/2022 12:52:13 AM');
+insert into userhistory values(5,5,208.6875,'5/6/2022 12:52:13 AM');
+Commit;
