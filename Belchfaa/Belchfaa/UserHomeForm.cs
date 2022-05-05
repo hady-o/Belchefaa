@@ -32,6 +32,7 @@ namespace Belchfaa
 
         private void button3_Click(object sender, EventArgs e)
         {
+            new SharedPreference().clearData();
             this.Close();
             new SignInForm().Show();
         }
@@ -102,7 +103,7 @@ namespace Belchfaa
         {
             if (MedicineQuaryClass.serchForMedicine(textBox1.Text))
             {
-                CurrentData.posistion = 0;
+                CurrentData.posistion = 3;
                 this.Close();
             }
         }
@@ -110,6 +111,11 @@ namespace Belchfaa
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            Program.first.Close();
         }
     }
 }

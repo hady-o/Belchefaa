@@ -137,7 +137,7 @@
             this.textBox1.Location = new System.Drawing.Point(543, 433);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 29);
+            this.textBox1.Size = new System.Drawing.Size(180, 36);
             this.textBox1.TabIndex = 7;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -162,10 +162,11 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // DisplayCartForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::Belchfaa.Properties.Resources.background;
@@ -175,7 +176,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
-            this.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DisplayCartForm";

@@ -14,10 +14,12 @@ namespace Belchfaa
 {
     public partial class FirstForm : Form
     {
+       
         CartClass c;
         string ordb = "Data Source=orcl;User Id=scott;Password=tiger;";
         public static OracleConnection conn;
         OracleCommand cmd;
+        SharedPreference login;
         
         public FirstForm()
         {
@@ -26,19 +28,30 @@ namespace Belchfaa
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             c=new CartClass();
-            
-            //conn = new OracleConnection(ordb);
-            //conn.Open();
+           
+            login = new SharedPreference();
+            if (login.getData())
+            {
+                Program.first.SetTopLevel(false);
+                new UserHomeForm().Visible=true;
+            }
+            conn = new OracleConnection(ordb);
+            conn.Open();
 
 
         }
-
+        public static void gone(bool g)
+        {
+            Program.first.SetTopLevel(g);
+        }
         private void button1_Click_1(object sender, EventArgs e)
         {
             //this.Visible= false;
-        
+          
             new SignInForm().Show();
+            Program.first.SetTopLevel(false);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -48,8 +61,10 @@ namespace Belchfaa
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //this.Visible = false;
-            new SignUpForm().Show();   
+            //Program.first.Visible = false;
+           
+            new SignUpForm().Visible=true;
+            Program.first.SetTopLevel(false);
         }
 
         private void button3_Click(object sender, EventArgs e)

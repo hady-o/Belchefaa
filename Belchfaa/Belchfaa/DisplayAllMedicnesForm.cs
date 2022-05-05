@@ -90,7 +90,8 @@ namespace Belchfaa
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            new UserHomeForm().Show();
         }
 
         private void button2_Click_1(object sender, EventArgs e)

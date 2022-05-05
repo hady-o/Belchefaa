@@ -137,6 +137,9 @@ private void textBox5_TextChanged(object sender, EventArgs e)
                 case 2:
                     new DisplayCartForm().Show();
                     break;
+                case 3:
+                    new UserHomeForm().Show();
+                    break;
                 default:
                     new SearchForm().Show();
                     break;

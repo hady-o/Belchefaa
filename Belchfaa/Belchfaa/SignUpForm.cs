@@ -25,7 +25,7 @@ namespace Belchfaa
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            FirstForm.gone(false);
             comboBox1.Items.Add("Male");
             comboBox1.Items.Add("Female");
             comboBox1.Items.Add("Not Say");
@@ -77,8 +77,9 @@ namespace Belchfaa
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            
             this.Close();
+            FirstForm.gone(true);
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)

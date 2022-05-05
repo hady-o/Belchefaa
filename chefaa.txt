@@ -8,6 +8,7 @@ INCREMENT BY 1;
 
 drop table medicines cascade constraints;
 drop table users cascade constraints;
+drop table login cascade constraints;
 drop table cart cascade constraints;
 drop table userHistory cascade constraints;
 drop table History cascade constraints;
@@ -27,6 +28,15 @@ medCatId number not null
 
 create table users(
 userId number primary key,
+gender varchar(50) not null,
+userName varchar(50) not null,
+userAge number not NULL,
+userPassword varchar(50) not null);
+
+
+
+create table login(
+userId number not null,
 gender varchar(50) not null,
 userName varchar(50) not null,
 userAge number not NULL,

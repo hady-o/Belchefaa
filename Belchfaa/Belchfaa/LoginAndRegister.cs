@@ -17,6 +17,7 @@ namespace Belchfaa
         public static OracleConnection conn;
         OracleCommand cmd;
         OracleCommand loginCmd;
+        SharedPreference addDa;
 
         public void signUp(TextBox textBox1, TextBox textBox2, TextBox textBox3, TextBox textBox4,ComboBox comboBox1)
         {
@@ -74,7 +75,7 @@ namespace Belchfaa
                 conn.Open();
                 cmd = new OracleCommand();
                 cmd.Connection = conn;
-
+                addDa = new SharedPreference();
 
                 cmd.CommandText = "select * from users where userId=:id and userPassword=:pass";
                 cmd.Parameters.Add("id", id.Text);
@@ -91,8 +92,9 @@ namespace Belchfaa
                         CurrentUserClass.userName = dr[2].ToString();
                         CurrentUserClass.gender = dr[1].ToString();
                         CurrentUserClass.userPassword = dr[4].ToString();
-
-                    return true;
+                        addDa.AddData(int.Parse(dr[0].ToString()), dr[1].ToString(), dr[2].ToString(),
+                        dr[4].ToString(), int.Parse(dr[3].ToString()));
+                        return true;
                         //MessageBox.Show("Login successfuly");
                         // MessageBox.Show("your name is: " + dr[1]);
                     }

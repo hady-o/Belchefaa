@@ -23,6 +23,7 @@ namespace Belchfaa
         {
             adminClass = new AdminClass();
             ds = adminClass.getusers(dataGridView2);
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

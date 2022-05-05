@@ -43,6 +43,7 @@ namespace Belchfaa
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            FirstForm.gone(false);
             login = new LoginAndRegister();
             textBox2.UseSystemPasswordChar = true;
         }
@@ -50,6 +51,7 @@ namespace Belchfaa
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+            FirstForm.gone(true);
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

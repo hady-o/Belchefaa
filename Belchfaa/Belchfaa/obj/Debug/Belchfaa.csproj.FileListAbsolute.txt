@@ -271,3 +271,4 @@ C:\Users\mhait\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.m
 C:\Users\mhait\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.userInteractionsForm.resources
 C:\Users\mhait\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.csproj.CopyComplete
 C:\Users\mhait\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.CreditPayment.resources
+C:\Users\hadi 11\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.CreditPayment.resources
