@@ -16,7 +16,11 @@ namespace Belchfaa
         public UserHomeForm()
         {
             InitializeComponent();
+         
         }
+
+     
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -52,6 +56,7 @@ namespace Belchfaa
 
         private void UserHomeForm_Load(object sender, EventArgs e)
         {
+            
             label2.Text = CurrentUserClass.userName;
             if (CurrentUserClass.gender.ToString() == "Male")
             {
@@ -65,7 +70,8 @@ namespace Belchfaa
             {
                 picbox.Image = Properties.Resources.not_say;
             }
-
+            
+           
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -108,6 +114,7 @@ namespace Belchfaa
             }
         }
 
+
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -117,5 +124,7 @@ namespace Belchfaa
         {
             Program.first.Close();
         }
+
     }
+
 }
