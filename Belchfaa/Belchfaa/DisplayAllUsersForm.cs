@@ -28,7 +28,15 @@ namespace Belchfaa
 
         private void button1_Click(object sender, EventArgs e)
         {
-            adminClass.saveData(ds);
+            try
+            {
+                adminClass.saveData(ds);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Invalid Process");
+            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

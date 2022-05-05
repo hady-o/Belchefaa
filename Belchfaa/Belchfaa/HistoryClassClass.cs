@@ -102,6 +102,7 @@ namespace Belchfaa
 
                     list2.SubItems.Add(dr2[1].ToString());
                     list2.SubItems.Add(dr2[2].ToString());
+                    list2.SubItems.Add(dr[0].ToString());
                     l2.Add(list2);
                         
                 }

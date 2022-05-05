@@ -234,7 +234,7 @@ namespace Belchfaa
 
         }
 
-        public void clearCart(int userId)
+        public bool clearCart(int userId)
         {
             conn = new OracleConnection(ordb);
             conn.Open();
@@ -247,14 +247,17 @@ namespace Belchfaa
             int r = cmd.ExecuteNonQuery();
             if (r != -1)
             {
-               
-               
+                msg mg = new msg();
+                mg.Load("You have cleared cart successfully");
+                mg.Show();
+                return true;
             }
             else
             {
                 msg mg = new msg();
                 mg.Load("You don't have this item");
                 mg.Show();
+                return false;
             }
             conn.Dispose();
             

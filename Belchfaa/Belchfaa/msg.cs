@@ -12,7 +12,7 @@ namespace Belchfaa
 {
     public partial class msg : Form
     {
-        int timerleft = 300;
+        int timerleft = int.MaxValue;
         public msg()
         {
             InitializeComponent();
@@ -42,6 +42,11 @@ namespace Belchfaa
         }   
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }

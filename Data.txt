@@ -40,17 +40,4 @@ insert into medicines values(39,'Oil House','Coffee Oil 30 Ml',120,155,'Organic 
 insert into medicines values(40,'Bless','Argan Oil | 50ml',185,177,'Organic Prods.',8);
 Commit;
 
-update medicines 
-set medcategory='Organic Prods.'
-where medid=28;
-Commit;
 
-update medicines 
-set medcategory='Organic Prods.'
-where medid=39;
-Commit;
-
-update medicines 
-set medcategory='Organic Prods.'
-where medid=40;
-Commit;

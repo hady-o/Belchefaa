@@ -35,12 +35,10 @@ namespace Belchfaa
             textBox1.Text = PaymentClass.subTotal.ToString() + " L.E.";
             if(PaymentClass.subTotal==0)
             {
-                
                 this.Close();
                 msg mg = new msg();
                 mg.Load("Your cart is empty");
                 mg.Show();
-                await Task.Delay(1000);
                 new UserHomeForm().Show();
             }
         }
@@ -89,6 +87,16 @@ namespace Belchfaa
         {
             this.Close();
             new UserHomeForm().Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (new CartClass().clearCart(CurrentUserClass.userId))
+            {
+                new UserHomeForm().Show();
+                this.Close();
+            }
+            
         }
     }
 }

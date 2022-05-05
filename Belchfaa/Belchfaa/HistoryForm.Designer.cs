@@ -144,11 +144,11 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.textBox1.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.textBox1.Location = new System.Drawing.Point(548, 495);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(205, 36);
+            this.textBox1.Size = new System.Drawing.Size(205, 35);
             this.textBox1.TabIndex = 11;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -167,11 +167,11 @@
             // textBox2
             // 
             this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.textBox2.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.textBox2.Location = new System.Drawing.Point(980, 498);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(205, 36);
+            this.textBox2.Size = new System.Drawing.Size(205, 35);
             this.textBox2.TabIndex = 13;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 

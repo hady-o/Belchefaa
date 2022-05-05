@@ -20,6 +20,7 @@ namespace Belchfaa
         }
         private void UserInfo_Load(object sender, EventArgs e)
         {
+            
             textBox1.Text = CurrentUserClass.userId.ToString();
             textBox2.Text = CurrentUserClass.userName;
             textBox3.Text = CurrentUserClass.userAge.ToString() + " years";
@@ -59,6 +60,11 @@ namespace Belchfaa
             comboBox1.Enabled = true;
             textBox3.Enabled = true;
             textBox4.Enabled = true;
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

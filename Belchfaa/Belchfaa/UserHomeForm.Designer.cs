@@ -211,11 +211,11 @@
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.textBox1.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.textBox1.Location = new System.Drawing.Point(17, 555);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(277, 36);
+            this.textBox1.Size = new System.Drawing.Size(277, 35);
             this.textBox1.TabIndex = 9;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
