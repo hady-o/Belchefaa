@@ -43,7 +43,7 @@ namespace Belchfaa
             {
                 msg mg = new msg();
                 mg.Load("Your Process has been Confirmed successfully");
-                mg.Show();
+                mg.ShowDialog();
 
                 c.clearCart(CurrentUserClass.userId);
                 id = cHistory.addToHistory(CurrentUserClass.userId, (PaymentClass.subTotal * 0.05) + PaymentClass.subTotal);
@@ -62,8 +62,7 @@ namespace Belchfaa
                 this.Close();
                 msg mg = new msg();
                 mg.Load("Please enter your credit card info correctly");
-                mg.Show();
-                await Task.Delay(1000);
+                mg.ShowDialog();
                 new CreditPayment().Show();
             }
         }

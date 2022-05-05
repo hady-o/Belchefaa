@@ -34,7 +34,9 @@ namespace Belchfaa
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Invalid Process");
+                msg mg = new msg();
+                mg.Load("Invalid Process");
+                mg.ShowDialog();
             }
             
         }

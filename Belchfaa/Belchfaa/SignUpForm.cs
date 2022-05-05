@@ -53,14 +53,14 @@ namespace Belchfaa
                     Text = "please fill all data";
                     msg mg = new msg();
                     mg.Load(Text);
-                    mg.Show();
+                    mg.ShowDialog();
                 }
                 else if (textBox3.Text != textBox4.Text)
                 {
                     Text = "wrong password confirmation";
                     msg mg = new msg();
                     mg.Load(Text);
-                    mg.Show();
+                    mg.ShowDialog();
                 }
                 else
                 {
@@ -71,9 +71,8 @@ namespace Belchfaa
             {
                 msg mg = new msg();
                 mg.Load(ex.Message);
-                mg.Show();
+                mg.ShowDialog();
             }
-            await Task.Delay(2000);
         }
 
         private void button2_Click(object sender, EventArgs e)

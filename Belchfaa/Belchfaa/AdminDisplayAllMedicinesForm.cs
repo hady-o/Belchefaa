@@ -88,7 +88,7 @@ namespace Belchfaa
             {
                 msg mg = new msg();
                 mg.Load("Not Found");
-                mg.Show();
+                mg.ShowDialog();
             }
         }
     }

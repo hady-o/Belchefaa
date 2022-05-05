@@ -87,7 +87,7 @@ namespace Belchfaa
             {
                 msg mg = new msg();
                 mg.Load("invalid");
-                mg.Show();
+                mg.ShowDialog();
             }
         }
 
@@ -110,7 +110,7 @@ namespace Belchfaa
             {
                 msg mg = new msg();
                 mg.Load("invalid");
-                mg.Show();
+                mg.ShowDialog();
             }
         }
 

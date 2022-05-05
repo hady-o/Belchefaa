@@ -78,7 +78,7 @@ namespace Belchfaa
             {
                 msg mg = new msg();
                 mg.Load("Your Process has been Confirmed successfully");
-                mg.Show();
+                mg.ShowDialog();
 
                 c.clearCart(CurrentUserClass.userId);
                 id =  cHistory.addToHistory(CurrentUserClass.userId, (PaymentClass.subTotal * 0.05) + PaymentClass.subTotal);
@@ -93,11 +93,11 @@ namespace Belchfaa
             else
             {              
                 
-                this.Close();
+                
                 msg mg = new msg();
                 mg.Load("please enter your location");
-                mg.Show();
-                await Task.Delay(1000);
+                mg.ShowDialog();
+                this.Close();
                 new PaymentForm().Show();
             }
         }
@@ -118,11 +118,11 @@ namespace Belchfaa
             else
             {
                 
-                this.Close();
+                
                 msg mg = new msg();
                 mg.Load("please enter your location");
-                mg.Show();
-                await Task.Delay(1000);
+                mg.ShowDialog();
+                this.Close();
                 new PaymentForm().Show();
             }
         }

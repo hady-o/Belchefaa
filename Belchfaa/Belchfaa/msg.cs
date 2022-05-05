@@ -12,7 +12,6 @@ namespace Belchfaa
 {
     public partial class msg : Form
     {
-        int timerleft = int.MaxValue;
         public msg()
         {
             InitializeComponent();
@@ -21,20 +20,7 @@ namespace Belchfaa
         public void Load(string text)
         {
             label2.Text = text;
-            timer1.Start();
-        }
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (timerleft == 0)
-            {
-                this.Hide();
-            }
-            else
-            { 
-            timerleft--;
-            }
-               
-
+        
         }
         private void button1_Click(object sender, EventArgs e)
         { 
@@ -47,6 +33,11 @@ namespace Belchfaa
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
         {
 
         }

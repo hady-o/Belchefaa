@@ -52,7 +52,7 @@ namespace Belchfaa
             adapter.Update(ds.Tables[0]);
             msg mg = new msg();
             mg.Load("Data has been updated successfully");
-            mg.Show();
+            mg.ShowDialog();
         }
 
         public DataSet getusers(DataGridView dataGridView)

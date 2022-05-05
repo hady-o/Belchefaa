@@ -30,7 +30,7 @@ namespace Belchfaa
                 updateMedAmount(userId, medId, medAmount-amount);
                 msg mg = new msg();
                 mg.Load("Item has been added successfully");
-                mg.Show();
+                mg.ShowDialog();
             }
             conn.Dispose();
 
@@ -57,13 +57,13 @@ namespace Belchfaa
                     updateMedAmount(userId, medId,oldAmount+medAmount );
                     msg mg = new msg();
                     mg.Load("Item has been removed successfully");
-                    mg.Show();
+                    mg.ShowDialog();
                 }
                 else
                 {
                     msg mg = new msg();
                     mg.Load("You don't have this item");
-                    mg.Show();
+                    mg.ShowDialog();
                    
                 }
                 conn.Dispose();
@@ -72,7 +72,7 @@ namespace Belchfaa
             {
                 msg mg = new msg();
                 mg.Load("You don't have this item");
-                mg.Show();
+                mg.ShowDialog();
             }
            
         }
@@ -142,7 +142,7 @@ namespace Belchfaa
             {
                 msg mg = new msg();
                 mg.Load("Item amount has been increased by " + amount);
-                mg.Show();
+                mg.ShowDialog();
                 updateMedAmount(userId, medId, medAmount - amount);
             }
             conn.Dispose();
@@ -180,14 +180,14 @@ namespace Belchfaa
                     {
                         msg mg = new msg();
                         mg.Load("Item amount has been decreased by " + amount);
-                        mg.Show();
+                        mg.ShowDialog();
                         updateMedAmount(userId, medId, medAmount + amount);
                     }
                     else
                     {
                         msg mg = new msg();
                         mg.Load("Invaild process " + amount);
-                        mg.Show();
+                        mg.ShowDialog();
                     }
                     conn.Dispose();
                 }
@@ -195,7 +195,7 @@ namespace Belchfaa
                 {
                     msg mg = new msg();
                     mg.Load("Invalid Amount");
-                    mg.Show();
+                    mg.ShowDialog();
                 }
                 
             }
@@ -203,7 +203,7 @@ namespace Belchfaa
             {
                 msg mg = new msg();
                 mg.Load("You dont have this item");
-                mg.Show();
+                mg.ShowDialog();
             }
             
 
@@ -249,14 +249,14 @@ namespace Belchfaa
             {
                 msg mg = new msg();
                 mg.Load("You have cleared cart successfully");
-                mg.Show();
+                mg.ShowDialog();
                 return true;
             }
             else
             {
                 msg mg = new msg();
                 mg.Load("You don't have this item");
-                mg.Show();
+                mg.ShowDialog();
                 return false;
             }
             conn.Dispose();

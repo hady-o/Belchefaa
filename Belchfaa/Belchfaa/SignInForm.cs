@@ -32,7 +32,7 @@ namespace Belchfaa
             {
                 msg mg = new msg();
                 mg.Load(ex.Message);
-                mg.Show();
+                mg.ShowDialog();
             }
         }
 

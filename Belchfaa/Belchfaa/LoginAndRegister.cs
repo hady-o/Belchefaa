@@ -61,7 +61,7 @@ namespace Belchfaa
 
                 msg mg = new msg();
                 mg.Load("You have been registerd successfully \n Your ID is: " + userId);
-                mg.Show();
+                mg.ShowDialog();
             }
             conn.Dispose();
         }
@@ -101,7 +101,7 @@ namespace Belchfaa
                     {
                     msg mg = new msg();
                     mg.Load(" Invalid Information");
-                    mg.Show();
+                    mg.ShowDialog();
                         return false;
                     }
                     dr.Close();
@@ -110,7 +110,7 @@ namespace Belchfaa
                 {
                    msg mg = new msg();
                     mg.Load(" Invalid Information");
-                    mg.Show();
+                    mg.ShowDialog();
                     dr.Close();
                     return false;
                 }

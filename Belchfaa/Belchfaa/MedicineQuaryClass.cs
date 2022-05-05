@@ -85,49 +85,8 @@ namespace Belchfaa
             {
                 msg mg = new msg();
                 mg.Load("Not Found");
-                mg.Show();
+                mg.ShowDialog();
             }
-
-            //else
-            //{
-            //    msg mg = new msg();
-            //    mg.Load("Not Found");
-            //    mg.Show();
-
-            //}
-
-
-            //OracleDataReader dr=cmd4.ExecuteReader();
-
-            //if (dr.Read())
-            //{
-            //    if (!(dr[0].ToString().Equals("")))
-            //    {
-            //        CurrentMed.medId = int.Parse(dr[0].ToString());
-            //        CurrentMed.medName = dr[1].ToString();
-            //        CurrentMed.medPrice = int.Parse(dr[3].ToString());
-            //        CurrentMed.medAmount = int.Parse(dr[4].ToString());
-            //        CurrentMed.medCategory = dr[5].ToString();
-            //        found = true;
-            //        new MedDetailsForm().Show();
-            //    }
-            //    else
-            //    {
-            //        msg mg = new msg();
-            //        mg.Load("Not Found");
-            //        mg.Show();
-
-            //    }
-            //    dr.Close();
-            //}
-            //else
-            //{
-            //    msg mg = new msg();
-            //    mg.Load("Not Found");
-            //    mg.Show();
-            //    dr.Close();
-
-            //}
             conn.Dispose();
             return found;   
 
@@ -164,7 +123,7 @@ namespace Belchfaa
 
             
             conn.Dispose(); 
-            //dhd
+           
 
         }
 
@@ -187,7 +146,7 @@ namespace Belchfaa
             {
                 msg mg = new msg();
                 mg.Load("Inserted succsesfully");
-                mg.Show();
+                mg.ShowDialog();
             }
             conn.Dispose();
 

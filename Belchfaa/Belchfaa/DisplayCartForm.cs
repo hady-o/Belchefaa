@@ -38,7 +38,8 @@ namespace Belchfaa
                 this.Close();
                 msg mg = new msg();
                 mg.Load("Your cart is empty");
-                mg.Show();
+                mg.ShowDialog();
+                
                 new UserHomeForm().Show();
             }
         }
@@ -62,7 +63,7 @@ namespace Belchfaa
             {
                 msg mg = new msg();
                 mg.Load("please select one item to display");
-                mg.Show();
+                mg.ShowDialog();
             }
         }
 

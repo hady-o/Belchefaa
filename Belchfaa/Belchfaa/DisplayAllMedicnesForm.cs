@@ -72,7 +72,7 @@ namespace Belchfaa
             {
                 msg mg = new msg();
                 mg.Load("please select one item to display");
-                mg.Show();
+                mg.ShowDialog();
             }
 
             
@@ -113,7 +113,7 @@ namespace Belchfaa
             {
                 msg mg = new msg();
                 mg.Load("There is no medicine now");
-                mg.Show();
+                mg.ShowDialog();
             }
             dr.Close();
         }
@@ -137,7 +137,7 @@ namespace Belchfaa
             {
                 msg mg = new msg();
                 mg.Load("This medicine doesn't exist");
-                mg.Show();
+                mg.ShowDialog();
             }
                 dr.Close();
             
