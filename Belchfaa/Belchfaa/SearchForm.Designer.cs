@@ -47,6 +47,7 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(157)))), ((int)(((byte)(179)))));
             this.button1.Location = new System.Drawing.Point(608, 344);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
@@ -61,20 +62,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(407, 279);
+            this.label1.Location = new System.Drawing.Point(382, 282);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 29);
+            this.label1.Size = new System.Drawing.Size(175, 27);
             this.label1.TabIndex = 2;
             this.label1.Text = "Medicine Name";
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.textBox1.Location = new System.Drawing.Point(590, 279);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 36);
+            this.textBox1.Size = new System.Drawing.Size(209, 35);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -82,11 +85,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(518, 221);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(342, 29);
+            this.label4.Size = new System.Drawing.Size(309, 27);
             this.label4.TabIndex = 8;
             this.label4.Text = "Please Enter Medicine Name";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -97,6 +101,7 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Berlin Sans FB", 15F);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(43, 248);
             this.button2.Margin = new System.Windows.Forms.Padding(4);

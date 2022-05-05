@@ -25,7 +25,7 @@ insert into medicines values(24,'Wipes','Dettol | Fresh Skin Wipes | 10s',19,220
 insert into medicines values(25,'Hand Gel','Secure Hand Gel | 75ml',20,215,'Protection 101',10);
 insert into medicines values(26,'Arthenia','Skin Cream | 20gm',85,140,'Skin Care',6);
 insert into medicines values(27,'Oral B 123','Toothbrush',18,135,'Oral Care',7);
-insert into medicines values(28,'Areej','Peppermint Cream | 200gm',150,50,'Oraganic Prods.',8);
+insert into medicines values(28,'Areej','Peppermint Cream | 200gm',150,50,'Organic Prods.',8);
 insert into medicines values(29,'Sensodyne','Action Nitro Toothpaste - 75ml',34,155,'Oral Care',7);
 insert into medicines values(30,'Fucidin','15 gm Cream',23,95,'Medicines',1);
 insert into medicines values(31,'C-retard','Vitamin C | 500mg | 10 Capsules',16,105,'Medicines',1);
@@ -36,6 +36,21 @@ insert into medicines values(35,'Eva','Skin Care | 100 ml',20,115,'Women Care',3
 insert into medicines values(36,'OGX','Brazilian Keratin Conditioner | 385ml',250,185,'Hair Care',5);
 insert into medicines values(37,'Infinity','Care Sunscreen Mist SPF 50+ | 200ml',175,60,'Skin Care',6);
 insert into medicines values(38,'Beesline','Whitening and Lifting Facial Foam | 150ml',210,100,'Skin Care',6);
-insert into medicines values(39,'Oil House','Coffee Oil 30 Ml',120,155,'Oraganic Prods.',8);
-insert into medicines values(40,'Bless','Argan Oil | 50ml',185,177,'Oraganic Prods.',8);
+insert into medicines values(39,'Oil House','Coffee Oil 30 Ml',120,155,'Organic Prods.',8);
+insert into medicines values(40,'Bless','Argan Oil | 50ml',185,177,'Organic Prods.',8);
+Commit;
+
+update medicines 
+set medcategory='Organic Prods.'
+where medid=28;
+Commit;
+
+update medicines 
+set medcategory='Organic Prods.'
+where medid=39;
+Commit;
+
+update medicines 
+set medcategory='Organic Prods.'
+where medid=40;
 Commit;
