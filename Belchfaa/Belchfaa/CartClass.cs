@@ -104,6 +104,7 @@ namespace Belchfaa
                 listview.Items.Add(list);
                 CurrentData.medIds.Add(int.Parse(dr[1].ToString()));
                 CurrentData.medAmounts.Add(int.Parse(dr[0].ToString()));
+                CurrentData.allMedAmounts.Add(int.Parse(dr[5].ToString()));
             }
             PaymentClass.subTotal=totalPrice;   
             dr.Close();
@@ -236,32 +237,36 @@ namespace Belchfaa
 
         public bool clearCart(int userId)
         {
+            CurrentData.medAmounts.Clear();
+            CurrentData.allMedAmounts.Clear();
+            CurrentData.medIds.Clear();
+            List<ListViewItem> lis = new List<ListViewItem>();
+            double totalPrice = 0.0;
             conn = new OracleConnection(ordb);
             conn.Open();
             cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = @"delete from cart
-                                where cartuserId=:userId";
+            cmd.CommandText = @"select c.amount,m.*
+                                from medicines m , cart c
+                                WHERE c.cartuserid =:id and c.cartmedid= m.medid";
             cmd.Parameters.Add("userId", userId);
-          
-            int r = cmd.ExecuteNonQuery();
-            if (r != -1)
+            OracleDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
             {
-                msg mg = new msg();
-                mg.Load("You have cleared cart successfully");
-                mg.ShowDialog();
-                return true;
+
+                CurrentData.medIds.Add(int.Parse(dr[1].ToString()));
+                CurrentData.medAmounts.Add(int.Parse(dr[0].ToString()));
+                CurrentData.allMedAmounts.Add(int.Parse(dr[5].ToString()));
             }
-            else
-            {
-                msg mg = new msg();
-                mg.Load("You don't have this item");
-                mg.ShowDialog();
-                return false;
-            }
+
+            dr.Close();
             conn.Dispose();
-            
-           
+
+            for (int i = 0; i < CurrentData.medIds.Count; i++)
+            {
+                removefromCart(CurrentUserClass.userId, CurrentData.medIds[i], CurrentData.allMedAmounts[i]);
+            }
+            return true;
 
         }
 

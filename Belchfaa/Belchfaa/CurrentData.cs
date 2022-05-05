@@ -16,6 +16,7 @@ namespace Belchfaa
         public static OracleDataReader currentDr;
         public static List<int> medIds =new List<int>();
         public static List<int> medAmounts =new List<int>();
+        public static List<int> allMedAmounts = new List<int>();
 
     }
 }
