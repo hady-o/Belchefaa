@@ -28,15 +28,16 @@ namespace Belchfaa
 
         private void Form7_Load(object sender, EventArgs e)
         {
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            string[] all_categories = File.ReadAllLines("Categories.txt");
-            foreach (string category in all_categories)
-            {
-                comboBox1.Items.Add(category);
-            }
-
             medicine = new MedicineQuaryClass();
             cart = new CartClass();
+
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            OracleDataReader category_dr = medicine.getAllCategories();
+            while (category_dr.Read())
+            {
+                comboBox1.Items.Add(category_dr[0]);
+            }
+
             OracleDataReader dr = medicine.allMedicines();
             while (dr.Read())
             {

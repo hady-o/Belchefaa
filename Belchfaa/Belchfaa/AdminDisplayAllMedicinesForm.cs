@@ -30,12 +30,14 @@ namespace Belchfaa
             adminClass = new AdminClass();
 
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            // Add all categories from a text file
-            string[] all_categories = File.ReadAllLines("Categories.txt");
-            foreach(string category in all_categories)
+            // Add all categories from a database
+            DataSet temp_ds = adminClass.getCategories();
+
+            foreach (DataRow row in temp_ds.Tables[0].Rows)
             {
-                comboBox1.Items.Add(category);
+                comboBox1.Items.Add(row[temp_ds.Tables[0].Columns[0]]);
             }
+
             dataSet = adminClass.getMedicines(dataGridView1);
         }
 
