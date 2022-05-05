@@ -275,3 +275,4 @@ C:\Users\Hany\Desktop\Github\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.cspr
 C:\Users\Hany\Desktop\Github\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.csproj.CopyComplete
 C:\Users\Hany\Desktop\Github\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.exe
 C:\Users\Hany\Desktop\Github\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.pdb
+C:\Users\Hady Ahmed\Documents\GitHub\Belchefaa\Belchfaa\Belchfaa\obj\Debug\Belchfaa.CreditPayment.resources
