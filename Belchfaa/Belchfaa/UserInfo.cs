@@ -20,7 +20,9 @@ namespace Belchfaa
         }
         private void UserInfo_Load(object sender, EventArgs e)
         {
-            
+            comboBox1.Items.Add("Male");
+            comboBox1.Items.Add("Female");
+            comboBox1.Items.Add("Not Say");
             textBox1.Text = CurrentUserClass.userId.ToString();
             textBox2.Text = CurrentUserClass.userName;
             textBox3.Text = CurrentUserClass.userAge.ToString() + " years";
@@ -42,6 +44,7 @@ namespace Belchfaa
             comboBox1.Enabled = false;
             textBox3.Enabled = false;
             textBox4.Enabled = false;
+            
         }
 
 
@@ -52,9 +55,7 @@ namespace Belchfaa
 
         private void button3_Click(object sender, EventArgs e)
         {
-            comboBox1.Items.Add("Male");
-            comboBox1.Items.Add("Female");
-            comboBox1.Items.Add("Not Say");
+            
             textBox3.Text = CurrentUserClass.userAge.ToString();
             textBox2.Enabled = true;
             comboBox1.Enabled = true;

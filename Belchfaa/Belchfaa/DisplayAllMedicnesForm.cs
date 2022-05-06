@@ -143,5 +143,10 @@ namespace Belchfaa
                 dr.Close();
             
         }
+
+        private void listView1_DrawColumnHeader(object sender, DrawListViewColumnHeaderEventArgs e)
+        {
+            
+        }
     }
 }

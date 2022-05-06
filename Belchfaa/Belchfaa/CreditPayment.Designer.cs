@@ -210,6 +210,7 @@ namespace Belchfaa
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CreditPayment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreditPayment";
             this.Load += new System.EventHandler(this.CreditPayment_Load);
             this.panel1.ResumeLayout(false);
