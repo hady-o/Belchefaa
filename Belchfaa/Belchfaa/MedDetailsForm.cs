@@ -99,7 +99,7 @@ namespace Belchfaa
             {
                 if (textBox5.Text == "")
                 {
-                    cart.removefromCart(CurrentUserClass.userId, CurrentMed.medId, CurrentMed.medAmount);
+                    cart.removefromCart(CurrentUserClass.userId, CurrentMed.medId, CurrentMed.medAmount,true);
 
                 }
                 else if (int.Parse(textBox5.Text) < 1)
@@ -171,7 +171,7 @@ namespace Belchfaa
             {       
                 if (textBox5.Text == "")
                 {
-                    if (cart.removefromCart(CurrentUserClass.userId, CurrentMed.medId, CurrentMed.medAmount))
+                    if (cart.removefromCart(CurrentUserClass.userId, CurrentMed.medId, CurrentMed.medAmount,true))
                     {
                         msg mg = new msg();
                         mg.Load("Item has been removed successfully");

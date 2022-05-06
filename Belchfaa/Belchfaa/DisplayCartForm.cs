@@ -92,7 +92,7 @@ namespace Belchfaa
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (new CartClass().clearCart(CurrentUserClass.userId))
+            if (new CartClass().clearCart(CurrentUserClass.userId,true))
             {
                 new UserHomeForm().Show();
                 this.Close();

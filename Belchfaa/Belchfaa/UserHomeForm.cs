@@ -36,7 +36,7 @@ namespace Belchfaa
 
         private void button3_Click(object sender, EventArgs e)
         {
-            new CartClass().clearCart(CurrentUserClass.userId);
+            new CartClass().clearCart(CurrentUserClass.userId,true);
             new SharedPreference().clearData();
             this.Close();
             new SignInForm().Show();
