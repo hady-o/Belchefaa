@@ -248,6 +248,7 @@ namespace Belchfaa
             conn.Open();
             cmd = new OracleCommand();
             cmd.Connection = conn;
+            
             cmd.CommandText = @"select c.amount,m.*
                                 from medicines m , cart c
                                 WHERE c.cartuserid =:id and c.cartmedid= m.medid";
@@ -274,6 +275,46 @@ namespace Belchfaa
             return true;
 
         }
+
+        public bool confirmCart(int userId)
+        {
+            CurrentData.medAmounts.Clear();
+            CurrentData.allMedAmounts.Clear();
+            CurrentData.medIds.Clear();
+            List<ListViewItem> lis = new List<ListViewItem>();
+            double totalPrice = 0.0;
+            conn = new OracleConnection(ordb);
+            conn.Open();
+            cmd = new OracleCommand();
+            cmd.Connection = conn;
+
+            cmd.CommandText = @"select c.amount,m.*
+                                from medicines m , cart c
+                                WHERE c.cartuserid =:id and c.cartmedid= m.medid";
+            cmd.Parameters.Add("userId", userId);
+            OracleDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+
+                CurrentData.medIds.Add(int.Parse(dr[1].ToString()));
+                CurrentData.medAmounts.Add(int.Parse(dr[0].ToString()));
+                CurrentData.allMedAmounts.Add(int.Parse(dr[5].ToString()));
+            }
+
+            dr.Close();
+            conn.Dispose();
+
+            //for (int i = 0; i < CurrentData.medIds.Count; i++)
+            //{
+            //    removefromCart(CurrentUserClass.userId, CurrentData.medIds[i], CurrentData.allMedAmounts[i]);
+            //}
+            msg mg = new msg();
+            mg.Load("Item has been removed successfully");
+            mg.ShowDialog();
+            return true;
+
+        }
+
 
     }
 

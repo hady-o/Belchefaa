@@ -45,7 +45,7 @@ namespace Belchfaa
                 mg.Load("Your Process has been Confirmed successfully");
                 mg.ShowDialog();
 
-                c.clearCart(CurrentUserClass.userId);
+                c.confirmCart(CurrentUserClass.userId);
                 id = cHistory.addToHistory(CurrentUserClass.userId, (PaymentClass.subTotal * 0.05) + PaymentClass.subTotal);
 
                 for (int i = 0; i < CurrentData.medIds.Count; i++)

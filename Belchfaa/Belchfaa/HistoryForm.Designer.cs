@@ -171,7 +171,7 @@
             this.textBox2.Location = new System.Drawing.Point(980, 498);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(205, 35);
+            this.textBox2.Size = new System.Drawing.Size(250, 35);
             this.textBox2.TabIndex = 13;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 

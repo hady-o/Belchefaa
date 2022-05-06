@@ -38,6 +38,7 @@ insert into medicines values(37,'Infinity','Care Sunscreen Mist SPF 50+ | 200ml'
 insert into medicines values(38,'Beesline','Whitening and Lifting Facial Foam | 150ml',210,100,'Skin Care',6);
 insert into medicines values(39,'Oil House','Coffee Oil 30 Ml',120,155,'Organic Prods.',8);
 insert into medicines values(40,'Bless','Argan Oil | 50ml',185,177,'Organic Prods.',8);
+
 Commit;
 
 
